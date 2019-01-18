@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)http://www.tutorialspoint.com/ruby/ruby_tk_listbox.htm -->
+<html class=" js no-touch csstransforms3d csstransitions"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Basic -->
+<meta charset="utf-8">
+<title>Ruby/TK - ListBox Widget </title>
+<meta name="description" content="Ruby/TK - ListBox Widget - Learning Ruby in simple and easy steps - A beginner&#39;s tutorial containing complete knowledge of Ruby Syntax Syntax, Classes, , Variables, Comments, Loops, File, I/O, Functions, Objects, TK, Ranges, iterators, arrays, strings, methods, blocks, Exception, Multi-Threading, Hashes, Modules, LDAP, Web Services, Web Programming.">
+<meta name="Keywords" content="Ruby, Tutorials, Learning, Beginners, Basics, Scripting Language, Syntax, Classes, , Variables, Comments, Loops, File, I/O, Functions, Objects, TK, Ranges, iterators, arrays, strings, methods, blocks, Exception, Multi-Threading, Hashes, Modules, LDAP, Web Services, Web Programming.">
+<!--<base href="http://www.tutorialspoint.com/">--><base href=".">
+<link rel="shortcut icon" href="http://www.tutorialspoint.com/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<meta name="author" content="tutorialspoint.com">
+<meta property="fb:app_id" content="471319149685276">
+<script type="text/javascript" src="./8.-Ruby_TK - ListBox Widget_files/script-min-v4.js"></script>
+<link rel="stylesheet" href="http://www.tutorialspoint.com/theme/css/style-min-v5.css">
+<!-- Head Libs -->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]-->
+<!-- Front Page related changes -->
+<style>
+pre.prettyprint.tryit {background: #eee url(/ruby/images/try-it.jpg) top right no-repeat !important}
+div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #891204 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #891204 !important;}
+.submenu-item{ border-bottom: 2px solid #891204 !important; border-top: 2px solid #891204 !important }
+</style>
+<script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script>
+</head>
+<body onload="prettyPrint()" class="sticky-menu-active" style="padding-top: 111px;">
+<div class="wrapLoader">
+   <div class="imgLoader">
+      <img src="./8.-Ruby_TK - ListBox Widget_files/loading-cg.gif" alt="" width="70" height="70">
+   </div>
+</div>
+<header>
+   <div class="container">			
+      <h1 class="logo logo-sticky-active">
+      <a href="http://www.tutorialspoint.com/index.htm" title="tutorialspoint">
+      <img alt="tutorialspoint" src="./8.-Ruby_TK - ListBox Widget_files/logo.png" style="height: 40px; width: 137px; display: inline-block; top: 28px;">
+      </a>
+      </h1>			
+      <div class="search" id="searchBar">
+         <form method="get" class="searchform" name="searchform" action="http://www.google.com/search" target="_blank">
+            <input type="hidden" name="sitesearch" value="www.tutorialspoint.com">
+            <div class="input-group">
+               <input type="text" class="form-control search" name="q" autocomplete="off" placeholder="Search your tutorials..." onfocus="if (this.value == &#39;Search your tutorials...&#39;) {this.value = &#39;&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;Search your tutorials...&#39;;}">
+               <input value="FORID:11" name="cof" type="hidden">
+               <input type="hidden" name="ie" value="ISO-8859-1">
+               <span class="input-group-btn"> <button class="btn btn-default" type="submit" onclick="javascript:void(0);"><i class="icon icon-search"></i></button> </span>
+            </div>
+         </form>
+      </div>
+      <nav>
+         <ul class="nav nav-pills nav-top">
+            <li class="top-icons" style="display:none;"> <a href="http://www.tutorialspoint.com/questions_and_answers.htm"><i class="fa fa-question"></i> &nbsp;Quizzes</a> </li>
+            <li> <a href="http://www.tutorialspoint.com/shared-tutorials.php"><i class="icon icon-user"></i> &nbsp;Shared</a> </li>
+            <li> <a href="http://www.tutorialspoint.com/articles/index.php"><i class="icon icon-file-text-o"></i> &nbsp;Articles</a> </li>
+            <li class="top-icons" style="display:none;"> <a href="http://www.tutorialspoint.com/job_search.php?search_string=jobs"><i class="fa fa-send"></i> &nbsp;Jobs</a> </li>
+
+            <li class="top-icons" style="display:none;">
+              <ul class="social-icons">
+              <li class="facebook"><a href="https://www.facebook.com/tutorialspointindia" target="_blank" data-placement="bottom" title="tutorialspoint @ Facebook">Facebook</a></li>
+              <li class="googleplus"><a href="https://plus.google.com/u/0/116678774017490391259/posts" target="_blank" data-placement="bottom" title="tutorialspoint @ Google+">Google+</a></li>
+              <li class="twitter"><a href="http://www.twitter.com/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Twitter">Twitter</a></li>
+              <li class="linkedin"><a href="http://www.linkedin.com/company/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Linkedin">Linkedin</a></li>
+              <li class="rss"><a href="http://feeds.feedburner.com/SharedTutorials" target="_blank" data-placement="bottom" title="tutorialspoint RSS">RSS</a></li>
+              </ul>
+           </li>
+         </ul>
+      </nav>
+         <!-- search code here  --> 
+      <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull" style="top: 461px!important"> <i class="icon icon-bars"></i> </button>
+   </div>
+   <div class="navbar nav-main">
+      <div class="container">
+         <nav class="nav-main mega-menu">
+            <ul class="nav nav-pills nav-main" id="mainMenu">
+               <li class="dropdown no-sub-menu"> <a class="dropdown" href="http://www.tutorialspoint.com/index.htm"><i class="icon icon-home"></i> Home</a> </li>   
+               <li class="dropdown" id="liTL"><a class="dropdown tut-lib" href="javascript:void(0);"> Tutorials Library  <i class="fa-caret-down"></i> </a></li>
+               <li class="dropdown" id="liCG"><a class="dropdown" href="javascript:void(0);"><i class="fa-code"></i> Coding Ground <i class="fa-caret-down"></i> </a> </li>
+               <li class="dropdown no-sub-menu"><a class="dropdown tut-plus" href="http://www.tutorialspoint.com/absoluteclasses/upcomingclasses.htm">Absolute Classes</a>
+               </li>
+            </ul>
+         </nav>
+         <div class="submenu-item sub-main-menu" id="top-sub-menu"></div>
+      </div>
+   </div>	
+</header>
+<div style="clear:both;"></div>
+<div role="main" class="main">
+<div class="container">
+<div class="row">
+<div class="col-md-2">
+<aside class="sidebar">
+<div class="mini-logo">
+<img src="./8.-Ruby_TK - ListBox Widget_files/ruby-mini-logo.jpg" alt="Ruby Tutorial">
+</div>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Ruby Basics</li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/index.htm">Ruby - Home</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_overview.htm">Ruby - Overview</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_environment.htm">Ruby - Environment</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_syntax.htm">Ruby - Syntax</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_classes.htm">Ruby - Classes</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_variables.htm">Ruby - Variables</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_operators.htm">Ruby - Operators</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_comments.htm">Ruby - Comments</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_if_else.htm">Ruby - IF...ELSE</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_loops.htm">Ruby - Loops</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_methods.htm">Ruby - Methods</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_blocks.htm">Ruby - Blocks</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_modules.htm">Ruby - Modules</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_strings.htm">Ruby - Strings</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_arrays.htm">Ruby - Arrays</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_hashes.htm">Ruby - Hashes</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_date_time.htm">Ruby - Date &amp; Time</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_ranges.htm">Ruby - Ranges</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_iterators.htm">Ruby - Iterators</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_input_output.htm">Ruby - File I/O</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_exceptions.htm">Ruby - Exceptions</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Ruby Advanced</li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_object_oriented.htm">Ruby - Object Oriented</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_regular_expressions.htm">Ruby - Regular Expressions</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_database_access.htm">Ruby - Database Access</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_web_applications.htm">Ruby - Web Applications</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_sending_email.htm">Ruby - Sending Email</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_socket_programming.htm">Ruby - Socket Programming</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_xml_xslt.htm">Ruby - Ruby/XML, XSLT</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_web_services.htm">Ruby - Web Services</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_tk_guide.htm" style="background-color: rgb(214, 214, 214);">Ruby - Tk Guide</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_ldap.htm">Ruby - Ruby/LDAP Tutorial</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_multithreading.htm">Ruby - Multithreading</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Ruby Useful Resources</li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_quick_guide.htm">Ruby - Quick Guide</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_builtin_functions.htm">Ruby - Built-in Functions</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_predefined_variables.htm">Ruby - Predefined Variables</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_predefined_constants.htm">Ruby - Predefined Constants</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_associated_tools.htm">Ruby - Associated Tools</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_resources.htm">Ruby - Useful Resources</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_discussion.htm">Ruby - Discussion</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby-on-rails/index.htm">Ruby - Ruby on Rails Tutorial</a></li>
+</ul>
+<ul class="nav nav-list primary push-bottom left-menu special">
+<li class="sreading">Selected Reading</li>
+<li><a target="_top" href="http://www.tutorialspoint.com/developers_best_practices/index.htm">Developer's Best Practices</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/questions_and_answers.htm">Questions and Answers</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/effective_resume_writing.htm">Effective Resume Writing</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/hr_interview_questions/index.htm">HR Interview Questions</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/computer_glossary.htm">Computer Glossary</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/computer_whoiswho.htm">Who is Who</a></li>
+</ul>
+</aside>
+</div>
+<!-- PRINTING STARTS HERE -->
+<div class="row">
+<div class="content">
+<div class="col-md-7 middle-col">
+<h1>Ruby/TK - ListBox Widget </h1>
+<div class="topgooglead">
+<hr>
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script>
+</div>
+<hr>
+<div class="pre-btn">
+<a href="http://www.tutorialspoint.com/ruby/ruby_tk_guide.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="http://www.tutorialspoint.com/ruby/ruby_tk_guide.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
+</div>
+<div class="clearer"></div>
+<hr>
+<h2>Description:</h2>
+<p>A <b>radiobutton </b> displays a list of single-line text items, usually lengthy, and allows the user to browse through the list, selecting one or more.</p>
+<p>When first created, a new listbox has no elements. Elements may be added or deleted using provided methods. In addition, one or more elements may be selected from the listed items.</p>
+<p>It is not necessary for all the elements to be displayed in the listbox window at once. Listboxes allow scrolling in both directions using the standard <i>xscrollcommand</i> and <i>yscrollcommand</i> options</p>
+<h2>Syntax:</h2>
+<p>Here is a simple syntax to create this widget:</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="typ">TkListbox</span><span class="pun">.</span><span class="kwd">new</span><span class="pun">(</span><span class="pln">root</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="pun">.....</span><span class="typ">Standard</span><span class="pln"> </span><span class="typ">Options</span><span class="pun">....</span><span class="pln">
+  </span><span class="pun">.....</span><span class="typ">Widget</span><span class="pun">-</span><span class="pln">specific </span><span class="typ">Options</span><span class="pun">....</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<h2>Standard Options:</h2>
+<ul class="list">
+<li><p>background </p></li>
+<li><p>borderwidth </p></li>
+<li><p>cursor</p></li>
+<li><p>disabledforeground </p></li>
+<li><p>exportselection</p></li>
+<li><p>font </p></li>
+<li><p>foreground </p></li>
+<li><p>hight</p></li>
+<li><p>highlightbackground</p></li> 
+<li><p>highlightcolor</p></li> 
+<li><p>highlightthickness</p></li>
+<li><p>offset</p></li>
+<li><p>relief </p></li>
+<li><p>selectbackground</p></li>
+<li><p>selectborderwidth </p></li>
+<li><p>selectforeground </p></li>
+<li><p>setgrid </p></li>
+<li><p>takefocus </p></li>
+<li><p>tile </p></li>
+<li><p>width </p></li>
+<li><p>xscrollcommand </p></li>
+<li><p>yscrollcommand</p></li>
+</ul>
+<p>These options have been described in previous chapter.</p>
+<h2>Widget-specific Options:</h2>
+<table class="table table-bordered">
+<tbody><tr><th style="width:5%">SN</th><th>Options with Description</th></tr>
+<tr><td>1</td><td><b>activestyle</b>  =&gt; String <p>Specifies the style in which to draw the active element.
+This must be one of <b>dotbox</b>, <b>none</b> or <b>underline</b>. The default is <b>underline</b>.</p></td></tr>
+<tr><td>2</td><td><b>height </b>  =&gt; Integer <p>Specifies the desired height for the window, in lines. If zero or less, then the desired height for the window is made just large enough to hold all the elements in the listbox.</p></td></tr>
+<tr><td>3</td><td><b>listvariable </b>  =&gt; Variable <p>Specifies the reference of a variable. The value of the variable is an array to be displayed inside the widget; if the variable value changes then the widget will automatically update itself to reflect the new value. </p></td></tr>
+<tr><td>4</td><td><b>selectmode</b>  =&gt; String <p>Specifies one of several styles for manipulating the selection. The value of the option may be arbitrary, but the default bindings expect it to be either <b>single</b>, <b>browse</b>, <b>multiple</b>, or  <b>extended</b>; the default value is <b>browse</b>.</p></td></tr>
+<tr><td>5</td><td><b>state </b>  =&gt; String <p>Specifies one of two states for the listbox: <b>normal</b> or <b>disabled</b>.
+If the listbox is disabled then items may not be inserted or deleted.</p></td></tr>
+<tr><td>6</td><td><b>width </b>  =&gt; Integer <p>Specifies the desired width for the window in characters. If the font doesn't have a uniform width then the width of the character "0" is used in translating from character units to screen units. If zero or less, then the desired width for the window is made just large enough to hold all the elements in the listbox.</p></td></tr>
+</tbody></table>
+<h2>Manipulating the Listbox Items:</h2>
+<p>There are various ways to play with a list box:</p>
+<ul class="list">
+<li><p>The <b>listvariable:</b> variable allows you to link a variable (which must hold a list) to the listbox. Each element of this list is a string representing one item in the listbox. So to add, remove, or rearrange items in the listbox, you can simply manipulate this variable as you would any other list.</p></li>
+<li><p>The <b>insert idx item ?item... ?</b> method is used to add one or more items to the list; "idx" is a 0-based index indicating the position of the item before which the item(s) should be added; specify "end" to put the new items at the end of the list.</p></li>
+<li><p>The <b>delete first ?last?</b> method is used to delete one or more items from the list; "first" and "last" are indices as per the "insert" method.</p></li>
+<li><p>The <b>get first ?last?</b> method returns the contents of a single item at the given position, or a list of the items between "first" and "last".</p></li>
+<li><p>The <b>size</b> method returns the number of items in the list.</p></li>
+<li><p>The <b>curselection</b> method is used to find out which item or items in the listbox the user has currently selected. This will return the list of indices of all items currently selected; this may be an empty list.</p></li>
+<li><p>The <b>selection clear first ?last?</b> method is used to deselect either a single item, or any within the range of indices specified. </p></li>
+<li><p>The <b>selection set first ?last?</b> method is used to select an item, or all items in a range.</p></li>
+<li><p>The <b>xview(args)</b> method is used to query and change the horizontal position of the information in the widget's window.</p></li>
+<li><p>The <b>yview(?args?)</b> method is used to query and change the vertical position of the text in the widget's window.</p></li>
+</ul>
+<h2>Indices:</h2>
+<p>Many of the methods for listboxes take one or more indices as arguments. An index specifies a particular element of the listbox, in any of the following ways:</p>
+<ul class="list">
+<li><p><b>number:</b> A decimal number giving the position of the desired character within the text item. 0 refers to the first character, 1 to the next character, and so on.</p></li>
+<li><p><b>active:</b> Indicates the element that has the location cursor. This element will be displayed with an underline when the listbox has the keyboard focus, and it is specified with the activate method.</p></li>
+<li><p><b>anchor:</b> Indicates the anchor point for the selection, which is set with the selection anchor method.</p></li>
+<li><p><b>end:</b> Indicates the end of the listbox. For some commands this means just after the last element; for other commands it means the last element.</p></li>
+</ul>
+<h2>Event Bindings:</h2>
+<p>Ruby/Tk creates class bindings for listboxes that give them Motif-like behavior. Much of the behavior of a listbox is determined by its <i>selectmode</i> option, which selects one of four ways of dealing with the selection.</p>
+<ul class="list">
+<li><p>If the selection mode is <b>single</b> or <b>browse</b>, at most one element can be selected in the listbox at once. In both modes, clicking button 1 on an element selects it and deselects any other selected item. In <b>browse</b> mode it is also possible to drag the selection with button 1.</p></li>
+<li><p>If the selection mode is <b>multiple</b> or <b>extended</b>, any number of elements may be selected at once, including discontiguous ranges.  In <b>multiple</b> mode, clicking button 1 on an element toggles its selection state without affecting any other elements. In <b>extended</b> mode, pressing button 1 on an element selects it, deselects everything else, and sets the anchor to the element under the mouse;  dragging the mouse with button 1 down extends the selection to include all the elements between the anchor and the element under the mouse, inclusive.</p></li>
+</ul>
+<p>Most people will probably want to use <i>browse</i> mode for single selections and <i>extended</i> mode for multiple selections; the other modes appear to be useful only in special situations.</p>
+<p>In addition to the above behavior, there are many other additional behaviors associated with a listbox which are not covered in this tutorial:</p>
+<h2>Example 1:</h2>
+<pre class="prettyprint notranslate prettyprinted"><span class="kwd">require</span><span class="pln"> </span><span class="str">"tk"</span><span class="pln">
+
+root </span><span class="pun">=</span><span class="pln"> </span><span class="typ">TkRoot</span><span class="pun">.</span><span class="kwd">new</span><span class="pln">
+root</span><span class="pun">.</span><span class="pln">title </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Window"</span><span class="pln">
+list </span><span class="pun">=</span><span class="pln"> </span><span class="typ">TkListbox</span><span class="pun">.</span><span class="kwd">new</span><span class="pun">(</span><span class="pln">root</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">do</span><span class="pln">
+  width </span><span class="lit">20</span><span class="pln">
+  height </span><span class="lit">10</span><span class="pln">
+  setgrid </span><span class="lit">1</span><span class="pln">
+  selectmode </span><span class="str">'multiple'</span><span class="pln">
+  pack</span><span class="pun">(</span><span class="str">'fill'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'x'</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+
+list</span><span class="pun">.</span><span class="pln">insert </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="str">"yellow"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"gray"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"green"</span><span class="pun">,</span><span class="pln">
+  </span><span class="str">"blue"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"red"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"black"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"white"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"cyan"</span><span class="pun">,</span><span class="pln">
+  </span><span class="str">"pink"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"yellow"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"orange"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"gray"</span><span class="pln">
+
+</span><span class="typ">Tk</span><span class="pun">.</span><span class="pln">mainloop</span></pre>
+<p>This will produce the following result:</p>
+<img src="./8.-Ruby_TK - ListBox Widget_files/tk-listbox1.jpg" alt="Ruby/Tk List Box 1">
+<h2>Example 2:</h2>
+<p>Following is the example using <i>listvariable</i> option to populate list items:</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="kwd">require</span><span class="pln"> </span><span class="str">"tk"</span><span class="pln">
+
+$names </span><span class="pun">=</span><span class="pln"> </span><span class="pun">%</span><span class="pln">w</span><span class="pun">{</span><span class="pln"> yellow gray green
+              blue red black white cyan
+              pink yellow orange gray</span><span class="pun">}</span><span class="pln">
+$colornames </span><span class="pun">=</span><span class="pln"> </span><span class="typ">TkVariable</span><span class="pun">.</span><span class="kwd">new</span><span class="pun">(</span><span class="pln">$names</span><span class="pun">)</span><span class="pln">
+
+root </span><span class="pun">=</span><span class="pln"> </span><span class="typ">TkRoot</span><span class="pun">.</span><span class="kwd">new</span><span class="pln">
+root</span><span class="pun">.</span><span class="pln">title </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Window"</span><span class="pln">
+
+list </span><span class="pun">=</span><span class="pln"> </span><span class="typ">TkListbox</span><span class="pun">.</span><span class="kwd">new</span><span class="pun">(</span><span class="pln">root</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">do</span><span class="pln">
+  width </span><span class="lit">20</span><span class="pln">
+  height </span><span class="lit">10</span><span class="pln">
+  setgrid </span><span class="lit">1</span><span class="pln">
+  listvariable $colornames
+  pack</span><span class="pun">(</span><span class="str">'fill'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'x'</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+
+</span><span class="typ">Tk</span><span class="pun">.</span><span class="pln">mainloop</span></pre>
+<p>This will produce the following result:</p>
+<img src="./8.-Ruby_TK - ListBox Widget_files/tk-listbox2.jpg" alt="Ruby/Tk List Box 2">
+<h2>Example 3:</h2>
+<p>Following example explains how to use <i>TkScrollbar</i> widget along with list box.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="kwd">require</span><span class="pln"> </span><span class="str">"tk"</span><span class="pln">
+
+$names </span><span class="pun">=</span><span class="pln"> </span><span class="pun">%</span><span class="pln">w</span><span class="pun">{</span><span class="pln"> yellow gray green
+              blue red black white cyan
+              pink yellow orange gray</span><span class="pun">}</span><span class="pln">
+$colornames </span><span class="pun">=</span><span class="pln"> </span><span class="typ">TkVariable</span><span class="pun">.</span><span class="kwd">new</span><span class="pun">(</span><span class="pln">$names</span><span class="pun">)</span><span class="pln">
+
+root </span><span class="pun">=</span><span class="pln"> </span><span class="typ">TkRoot</span><span class="pun">.</span><span class="kwd">new</span><span class="pln">
+root</span><span class="pun">.</span><span class="pln">title </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Window"</span><span class="pln">
+
+list </span><span class="pun">=</span><span class="pln"> </span><span class="typ">TkListbox</span><span class="pun">.</span><span class="kwd">new</span><span class="pun">(</span><span class="pln">root</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">do</span><span class="pln">
+  listvariable $colornames
+  pack</span><span class="pun">(</span><span class="str">'fill'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'x'</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+
+list</span><span class="pun">.</span><span class="pln">place</span><span class="pun">(</span><span class="str">'height'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="lit">150</span><span class="pun">,</span><span class="pln">
+           </span><span class="str">'width'</span><span class="pln">  </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="lit">100</span><span class="pun">,</span><span class="pln">
+           </span><span class="str">'x'</span><span class="pln">      </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="lit">10</span><span class="pun">,</span><span class="pln">
+           </span><span class="str">'y'</span><span class="pln">      </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="lit">10</span><span class="pun">)</span><span class="pln">
+
+scroll </span><span class="pun">=</span><span class="pln"> </span><span class="typ">TkScrollbar</span><span class="pun">.</span><span class="kwd">new</span><span class="pun">(</span><span class="pln">root</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">do</span><span class="pln">
+    orient </span><span class="str">'vertical'</span><span class="pln">
+    place</span><span class="pun">(</span><span class="str">'height'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="lit">150</span><span class="pun">,</span><span class="pln"> </span><span class="str">'x'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="lit">110</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+
+list</span><span class="pun">.</span><span class="pln">yscrollcommand</span><span class="pun">(</span><span class="pln">proc </span><span class="pun">{</span><span class="pln"> </span><span class="pun">|*</span><span class="pln">args</span><span class="pun">|</span><span class="pln">
+  scroll</span><span class="pun">.</span><span class="kwd">set</span><span class="pun">(*</span><span class="pln">args</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">})</span><span class="pln">
+
+scroll</span><span class="pun">.</span><span class="pln">command</span><span class="pun">(</span><span class="pln">proc </span><span class="pun">{</span><span class="pln"> </span><span class="pun">|*</span><span class="pln">args</span><span class="pun">|</span><span class="pln">
+  list</span><span class="pun">.</span><span class="pln">yview</span><span class="pun">(*</span><span class="pln">args</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">})</span><span class="pln"> 
+
+</span><span class="typ">Tk</span><span class="pun">.</span><span class="pln">mainloop</span></pre>
+<p>This will produce the following result:</p>
+<img src="./8.-Ruby_TK - ListBox Widget_files/tk-listbox3.jpg" alt="Ruby/Tk List Box 3">   
+<hr>
+<div class="pre-btn">
+<a href="http://www.tutorialspoint.com/ruby/ruby_tk_guide.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
+</div>
+<div class="print-btn center">
+<a href="http://www.tutorialspoint.com/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a>
+</div>
+<div class="nxt-btn">
+<a href="http://www.tutorialspoint.com/ruby/ruby_tk_guide.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
+</div>
+<div class="parent-file">ruby_tk_guide.htm</div>
+<hr>
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead">
+<div class="bottomadtag">Advertisements</div>
+<script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3" id="rightbar">
+<div class="simple-ad">
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;http://www.facebook.com/sharer.php?u=&#39; + &#39;http://www.tutorialspoint.com/ruby/ruby_tk_listbox.htm&#39;,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./8.-Ruby_TK - ListBox Widget_files/facebookIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;http://twitter.com/share?url=&#39; + &#39;http://www.tutorialspoint.com/ruby/ruby_tk_listbox.htm&#39;,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./8.-Ruby_TK - ListBox Widget_files/twitterIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;https://www.linkedin.com/cws/share?url=&#39; + &#39;http://www.tutorialspoint.com/ruby/ruby_tk_listbox.htm&amp;title=&#39;+ document.title,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./8.-Ruby_TK - ListBox Widget_files/linkedinIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;https://plus.google.com/share?url=http://www.tutorialspoint.com/ruby/ruby_tk_listbox.htm&#39;,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./8.-Ruby_TK - ListBox Widget_files/googlePlusIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/ruby/ruby_tk_listbox.htm&amp;title=&#39;+ document.title,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./8.-Ruby_TK - ListBox Widget_files/StumbleUponIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;http://reddit.com/submit?url=http://www.tutorialspoint.com/ruby/ruby_tk_listbox.htm&amp;title=&#39;+ document.title,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=656,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./8.-Ruby_TK - ListBox Widget_files/reddit.jpg" alt="img">
+</a>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="footer-copyright">
+<div class="container">
+<div class="row">
+<div class="col-md-1">
+<a href="http://www.tutorialspoint.com/index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="./8.-Ruby_TK - ListBox Widget_files/logo-footer.png"> </a>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+   <nav id="sub-menu">
+      <ul>
+         <li><a href="http://www.tutorialspoint.com/about/tutorials_writing.htm">Write for us</a></li>
+         <li><a href="http://www.tutorialspoint.com/about/faq.htm">FAQ's</a></li>
+         <li><a href="http://www.tutorialspoint.com/about/about_helping.htm">Helping</a></li>
+         <li><a href="http://www.tutorialspoint.com/about/contact_us.htm">Contact</a></li>
+      </ul>
+   </nav>
+</div>
+<div class="col-md-3 col-sm-12 col-xs-12">
+<p>© Copyright 2015. All Rights Reserved.</p>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+   <div class="news-group">
+      <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == &#39;Enter email for newsletter...&#39;) {this.value = &#39;&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;Enter email for newsletter...&#39;;}">
+      <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span>
+      <div id="newsresponse"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Libs -->
+<script type="text/javascript" src="./8.-Ruby_TK - ListBox Widget_files/custom-min.js"></script><a class="scroll-to-top visible" href="http://www.tutorialspoint.com/#" id="scrollToTop"><i class="icon icon-chevron-up icon-white"></i></a>
+<script src="./8.-Ruby_TK - ListBox Widget_files/urchin.js">
+</script>
+<script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>
+<script type="text/javascript" src="./8.-Ruby_TK - ListBox Widget_files/jquery.colorbox-min.js"></script>
+<script type="text/javascript">
+   var tryit = new $.TryIt('/ruby/try_ruby.php');
+   tryit.compile();
+</script><div id="source" style="display:none;"></div><div id="supportsource" style="display:none;"></div><div id="utilsource" style="display:none;"></div><div id="extrasource" style="display:none;"></div><div id="inputs" style="display:none;"></div><div id="filename" style="display:none;"></div>
+
+
+<div class="autocomplete-suggestions "></div><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div></body></html>

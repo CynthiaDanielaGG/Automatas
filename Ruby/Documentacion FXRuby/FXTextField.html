@@ -1,0 +1,2183 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)http://www.rubydoc.info/gems/fxruby/Fox/FXTextField -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Fox::FXTextField
+  
+    — Documentation for fxruby (1.6.33)
+  
+</title>
+
+  <link rel="stylesheet" href="./FXTextField_files/style.css" type="text/css" charset="utf-8">
+
+  <link rel="stylesheet" href="./FXTextField_files/common.css" type="text/css" charset="utf-8">
+
+  <link rel="stylesheet" href="./FXTextField_files/custom.css" type="text/css" charset="utf-8">
+
+<script async="" src="./FXTextField_files/analytics.js"></script><script type="text/javascript" charset="utf-8">
+  pathId = "Fox::FXTextField"
+  relpath = '/';
+  docsPrefix = 'gems/fxruby';
+  listPrefix = 'list/gems/fxruby';
+  searchPrefix = 'search/gems/fxruby';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="./FXTextField_files/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="./FXTextField_files/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="./FXTextField_files/autocomplete.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="./FXTextField_files/rubydoc_custom.js"></script>
+
+
+  <script type="text/javascript" async="" src="./FXTextField_files/in.php"></script><script type="text/javascript" async="" src="./FXTextField_files/in(1).php"></script></head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="./FXTextField_files/class.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <form class="search" method="get" action="http://www.rubydoc.info/search/gems/fxruby">
+  <input name="q" type="search" placeholder="Search" id="search_box" size="30" value="" autocomplete="off" class="ac_input">
+</form>
+<script type="text/javascript" charset="utf-8">
+  $(function() {
+    $('#search_box').autocomplete($('#search_box').parent().attr('action'), {
+      width: 200,
+      formatItem: function(item) {
+        var values = item[0].split(",");
+        return values[0] + (values[1] == '' ? "" : " <small>(" + values[1] + ")</small>");
+      }
+    }).result(function(event, item) {
+      var values = item[0].split(",")
+      $('#search_box').val(values[1]);
+      location.href = values[3];
+      return false;
+    });
+  });
+</script>
+
+<div id="menu">
+  
+    <a href="http://www.rubydoc.info/gems" target="_top">Libraries</a> »
+    <span class="title">fxruby <small>(1.6.33)</small></span>
+  
+  
+    »
+    <a href="http://www.rubydoc.info/gems/fxruby/index">Index (F)</a> »
+    <span class="title"><span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox" title="Fox (module)">Fox</a></span></span>
+     » 
+    <span class="title">FXTextField</span>
+  
+</div>
+
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link" href="./FXTextField_files/class.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="./FXTextField_files/class.html"></iframe>
+
+      <div id="content"><h1>Class: Fox::FXTextField
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFrame" title="Fox::FXFrame (class)">FXFrame</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXObject" title="Fox::FXObject (class)">FXObject</a></span></li>
+          
+            <li class="next"><span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXId" title="Fox::FXId (class)">FXId</a></span></li>
+          
+            <li class="next"><span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXDrawable" title="Fox::FXDrawable (class)">FXDrawable</a></span></li>
+          
+            <li class="next"><span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow" title="Fox::FXWindow (class)">FXWindow</a></span></li>
+          
+            <li class="next"><span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFrame" title="Fox::FXFrame (class)">FXFrame</a></span></li>
+          
+            <li class="next">Fox::FXTextField</li>
+          
+        </ul>
+        <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>rdoc-sources/FXTextField.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>A text field is a single-line text entry widget. The text field widget
+supports clipboard for cut-and-paste operations. The text field also sends
+SEL_COMMAND when the focus moves to another control. TEXTFIELD_ENTER_ONLY
+can be passed to suppress this feature. Typically, this flag is used in
+dialogs that close when ENTER is hit in a text field.</p>
+
+<h3>Events</h3>
+
+<p>The following messages are sent from FXTextField to its target:</p>
+<table class="rdoc-list"><tbody><tr><td class="rdoc-term"><p><tt>SEL_COMMAND</tt></p></td>
+<td>
+<p>sent when the user presses the <b>Enter</b> key or tabs out of the text
+field; the message data is a String containing the text.</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>SEL_CHANGED</tt></p></td>
+<td>
+<p>sent when the text changes; the message data is a String containing the
+text.</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>SEL_VERIFY</tt></p></td>
+<td>
+<p>sent when the user attempts to enter new text in the text field; the
+message data is a String containing the proposed new text.</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>SEL_KEYPRESS</tt></p></td>
+<td>
+<p>sent when a key goes down; the message data is an FXEvent instance.</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>SEL_KEYRELEASE</tt></p></td>
+<td>
+<p>sent when a key goes up; the message data is an FXEvent instance.</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>SEL_LEFTBUTTONPRESS</tt></p></td>
+<td>
+<p>sent when the left mouse button goes down; the message data is an FXEvent
+instance.</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>SEL_LEFTBUTTONRELEASE</tt></p></td>
+<td>
+<p>sent when the left mouse button goes up; the message data is an FXEvent
+instance.</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>SEL_MIDDLEBUTTONPRESS</tt></p></td>
+<td>
+<p>sent when the middle mouse button goes down; the message data is an FXEvent
+instance.</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>SEL_MIDDLEBUTTONRELEASE</tt></p></td>
+<td>
+<p>sent when the middle mouse button goes up; the message data is an FXEvent
+instance.</p>
+</td></tr></tbody></table>
+
+<h3>Textfield styles</h3>
+<table class="rdoc-list"><tbody><tr><td class="rdoc-term"><p><tt>TEXTFIELD_PASSWD</tt></p></td>
+<td>
+<p>Password mode</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>TEXTFIELD_INTEGER</tt></p></td>
+<td>
+<p>Integer mode</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>TEXTFIELD_REAL</tt></p></td>
+<td>
+<p>Real mode</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>TEXTFIELD_READONLY</tt></p></td>
+<td>
+<p>NOT editable</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>TEXTFIELD_ENTER_ONLY</tt></p></td>
+<td>
+<p>Only callback when enter hit</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>TEXTFIELD_LIMITED</tt></p></td>
+<td>
+<p>Limit entry to given number of columns</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>TEXTFIELD_OVERSTRIKE</tt></p></td>
+<td>
+<p>Overstrike mode</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>TEXTFIELD_NORMAL</tt></p></td>
+<td>
+<p><tt>FRAME_SUNKEN|FRAME_THICK</tt></p>
+</td></tr></tbody></table>
+
+<h3>Message identifiers</h3>
+<table class="rdoc-list"><tbody><tr><td class="rdoc-term"><p><tt>ID_CURSOR_HOME</tt></p></td>
+<td></td></tr><tr><td class="rdoc-term"><p><tt>ID_CURSOR_END</tt></p></td>
+<td></td></tr><tr><td class="rdoc-term"><p><tt>ID_CURSOR_RIGHT</tt></p></td>
+<td></td></tr><tr><td class="rdoc-term"><p><tt>ID_CURSOR_LEFT</tt></p></td>
+<td></td></tr><tr><td class="rdoc-term"><p><tt>ID_MARK</tt></p></td>
+<td></td></tr><tr><td class="rdoc-term"><p><tt>ID_EXTEND</tt></p></td>
+<td></td></tr><tr><td class="rdoc-term"><p><tt>ID_SELECT_ALL</tt></p></td>
+<td></td></tr><tr><td class="rdoc-term"><p><tt>ID_DESELECT_ALL</tt></p></td>
+<td></td></tr><tr><td class="rdoc-term"><p><tt>ID_CUT_SEL</tt></p></td>
+<td></td></tr><tr><td class="rdoc-term"><p><tt>ID_COPY_SEL</tt></p></td>
+<td></td></tr><tr><td class="rdoc-term"><p><tt>ID_PASTE_SEL</tt></p></td>
+<td></td></tr><tr><td class="rdoc-term"><p><tt>ID_DELETE_SEL</tt></p></td>
+<td></td></tr><tr><td class="rdoc-term"><p><tt>ID_OVERST_STRING</tt></p></td>
+<td></td></tr><tr><td class="rdoc-term"><p><tt>ID_INSERT_STRING</tt></p></td>
+<td></td></tr><tr><td class="rdoc-term"><p><tt>ID_BACKSPACE</tt></p></td>
+<td></td></tr><tr><td class="rdoc-term"><p><tt>ID_DELETE</tt></p></td>
+<td></td></tr><tr><td class="rdoc-term"><p><tt>ID_TOGGLE_EDITABLE</tt></p></td>
+<td></td></tr><tr><td class="rdoc-term"><p><tt>ID_TOGGLE_OVERSTRIKE</tt></p></td>
+<td></td></tr><tr><td class="rdoc-term"><p><tt>ID_BLINK</tt></p></td>
+<td></td></tr></tbody></table>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#anchorPos-instance_method" title="#anchorPos (instance method)">#<strong>anchorPos</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Anchor position [Integer].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#cursorPos-instance_method" title="#cursorPos (instance method)">#<strong>cursorPos</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Cursor position [Integer].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#editable%3D-instance_method" title="#editable= (instance method)">#<strong>editable</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+      <span class="note title writeonly">writeonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Text field editability [Boolean].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#font-instance_method" title="#font (instance method)">#<strong>font</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Text font <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont" title="Fox::FXFont (class)">FXFont</a></span>.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#helpText-instance_method" title="#helpText (instance method)">#<strong>helpText</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Status line help text [String].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#justify-instance_method" title="#justify (instance method)">#<strong>justify</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Text justification mode, a combination of horizontal justification
+(JUSTIFY_LEFT, JUSTIFY_RIGHT, or JUSTIFY_CENTER_X), and vertical
+justification (JUSTIFY_TOP, JUSTIFY_BOTTOM, JUSTIFY_CENTER_Y) [Integer].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#numColumns-instance_method" title="#numColumns (instance method)">#<strong>numColumns</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Default width of this text field, in terms of a number of columns times the
+width of the numeral '8' [Integer].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#selBackColor-instance_method" title="#selBackColor (instance method)">#<strong>selBackColor</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Background color for selected text <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXColor" title="Fox::FXColor (class)">FXColor</a></span>.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#selTextColor-instance_method" title="#selTextColor (instance method)">#<strong>selTextColor</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Foreground color for selected text <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXColor" title="Fox::FXColor (class)">FXColor</a></span>.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#text-instance_method" title="#text (instance method)">#<strong>text</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Text [String].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#textColor-instance_method" title="#textColor (instance method)">#<strong>textColor</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Text color <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXColor" title="Fox::FXColor (class)">FXColor</a></span>.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#textStyle-instance_method" title="#textStyle (instance method)">#<strong>textStyle</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Text style [Integer].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#tipText-instance_method" title="#tipText (instance method)">#<strong>tipText</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Tool tip message [String].</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFrame" title="Fox::FXFrame (class)">FXFrame</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFrame#baseColor-instance_method" title="Fox::FXFrame#baseColor (method)">#baseColor</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFrame#borderColor-instance_method" title="Fox::FXFrame#borderColor (method)">#borderColor</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFrame#borderWidth-instance_method" title="Fox::FXFrame#borderWidth (method)">#borderWidth</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFrame#frameStyle-instance_method" title="Fox::FXFrame#frameStyle (method)">#frameStyle</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFrame#hiliteColor-instance_method" title="Fox::FXFrame#hiliteColor (method)">#hiliteColor</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFrame#padBottom-instance_method" title="Fox::FXFrame#padBottom (method)">#padBottom</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFrame#padLeft-instance_method" title="Fox::FXFrame#padLeft (method)">#padLeft</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFrame#padRight-instance_method" title="Fox::FXFrame#padRight (method)">#padRight</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFrame#padTop-instance_method" title="Fox::FXFrame#padTop (method)">#padTop</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFrame#shadowColor-instance_method" title="Fox::FXFrame#shadowColor (method)">#shadowColor</a></span></p>
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow" title="Fox::FXWindow (class)">FXWindow</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#accelTable-instance_method" title="Fox::FXWindow#accelTable (method)">#accelTable</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#backColor-instance_method" title="Fox::FXWindow#backColor (method)">#backColor</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#defaultCursor-instance_method" title="Fox::FXWindow#defaultCursor (method)">#defaultCursor</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#dragCursor-instance_method" title="Fox::FXWindow#dragCursor (method)">#dragCursor</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#first-instance_method" title="Fox::FXWindow#first (method)">#first</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#focus-instance_method" title="Fox::FXWindow#focus (method)">#focus</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#key-instance_method" title="Fox::FXWindow#key (method)">#key</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#last-instance_method" title="Fox::FXWindow#last (method)">#last</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#layoutHints-instance_method" title="Fox::FXWindow#layoutHints (method)">#layoutHints</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#next-instance_method" title="Fox::FXWindow#next (method)">#next</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#numChildren-instance_method" title="Fox::FXWindow#numChildren (method)">#numChildren</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#owner-instance_method" title="Fox::FXWindow#owner (method)">#owner</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#parent-instance_method" title="Fox::FXWindow#parent (method)">#parent</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#prev-instance_method" title="Fox::FXWindow#prev (method)">#prev</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#root-instance_method" title="Fox::FXWindow#root (method)">#root</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#selector-instance_method" title="Fox::FXWindow#selector (method)">#selector</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#shell-instance_method" title="Fox::FXWindow#shell (method)">#shell</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#target-instance_method" title="Fox::FXWindow#target (method)">#target</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#x-instance_method" title="Fox::FXWindow#x (method)">#x</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#y-instance_method" title="Fox::FXWindow#y (method)">#y</a></span></p>
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXDrawable" title="Fox::FXDrawable (class)">FXDrawable</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXDrawable#height-instance_method" title="Fox::FXDrawable#height (method)">#height</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXDrawable#visual-instance_method" title="Fox::FXDrawable#visual (method)">#visual</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXDrawable#width-instance_method" title="Fox::FXDrawable#width (method)">#width</a></span></p>
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXId" title="Fox::FXId (class)">FXId</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXId#app-instance_method" title="Fox::FXId#app (method)">#app</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXId#userData-instance_method" title="Fox::FXId#userData (method)">#userData</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXId#xid-instance_method" title="Fox::FXId#xid (method)">#xid</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#editable%3F-instance_method" title="#editable? (instance method)">#<strong>editable?</strong>  ⇒ Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Return <tt>true</tt> if text field may be edited.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#extendSelection-instance_method" title="#extendSelection (instance method)">#<strong>extendSelection</strong>(pos)  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Extend the selection from the anchor to the given position <em>pos</em>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(p, ncols, target = nil, selector = 0, opts = TEXTFIELD_NORMAL, x = 0, y = 0, width = 0, height = 0, padLeft = DEFAULT_PAD, padRight = DEFAULT_PAD, padTop = DEFAULT_PAD, padBottom = DEFAULT_PAD)  ⇒ FXTextField </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Return an initialized FXTextField instance.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#killSelection-instance_method" title="#killSelection (instance method)">#<strong>killSelection</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Unselect the text.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#makePositionVisible-instance_method" title="#makePositionVisible (instance method)">#<strong>makePositionVisible</strong>(pos)  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Scroll text to make the given position <em>pos</em> visible.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#overstrike%3D-instance_method" title="#overstrike= (instance method)">#<strong>overstrike=</strong>(os)  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Set overstrike mode to <tt>true</tt> or <tt>false</tt>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#overstrike%3F-instance_method" title="#overstrike? (instance method)">#<strong>overstrike?</strong>  ⇒ Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Return <tt>true</tt> if overstrike mode is set.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#posSelected%3F-instance_method" title="#posSelected? (instance method)">#<strong>posSelected?</strong>(pos)  ⇒ Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Return <tt>true</tt> if position <em>pos</em> is selected.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#posVisible%3F-instance_method" title="#posVisible? (instance method)">#<strong>posVisible?</strong>(pos)  ⇒ Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Return <tt>true</tt> if position <em>pos</em> is fully visible.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#selectAll-instance_method" title="#selectAll (instance method)">#<strong>selectAll</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Select all text.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#setSelection-instance_method" title="#setSelection (instance method)">#<strong>setSelection</strong>(pos, len)  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Select <em>len</em> characters starting at given position <em>pos</em>.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow" title="Fox::FXWindow (class)">FXWindow</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#acceptDrop-instance_method" title="Fox::FXWindow#acceptDrop (method)">#acceptDrop</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#acquireClipboard-instance_method" title="Fox::FXWindow#acquireClipboard (method)">#acquireClipboard</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#acquireSelection-instance_method" title="Fox::FXWindow#acquireSelection (method)">#acquireSelection</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#active%3F-instance_method" title="Fox::FXWindow#active? (method)">#active?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#addHotKey-instance_method" title="Fox::FXWindow#addHotKey (method)">#addHotKey</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#after%3F-class_method" title="Fox::FXWindow.after? (method)">after?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#after%3F-instance_method" title="Fox::FXWindow#after? (method)">#after?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#before%3F-class_method" title="Fox::FXWindow.before? (method)">before?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#before%3F-instance_method" title="Fox::FXWindow#before? (method)">#before?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#beginDrag-instance_method" title="Fox::FXWindow#beginDrag (method)">#beginDrag</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#canFocus%3F-instance_method" title="Fox::FXWindow#canFocus? (method)">#canFocus?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#changeFocus-instance_method" title="Fox::FXWindow#changeFocus (method)">#changeFocus</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#childAtIndex-instance_method" title="Fox::FXWindow#childAtIndex (method)">#childAtIndex</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#childOf%3F-instance_method" title="Fox::FXWindow#childOf? (method)">#childOf?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#children-instance_method" title="Fox::FXWindow#children (method)">#children</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#clearDragRectangle-instance_method" title="Fox::FXWindow#clearDragRectangle (method)">#clearDragRectangle</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#clearShape-instance_method" title="Fox::FXWindow#clearShape (method)">#clearShape</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#colorType-class_method" title="Fox::FXWindow.colorType (method)">colorType</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#colorTypeName-class_method" title="Fox::FXWindow.colorTypeName (method)">colorTypeName</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#commonAncestor-class_method" title="Fox::FXWindow.commonAncestor (method)">commonAncestor</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#composeContext-instance_method" title="Fox::FXWindow#composeContext (method)">#composeContext</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#composite%3F-instance_method" title="Fox::FXWindow#composite? (method)">#composite?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#contains%3F-instance_method" title="Fox::FXWindow#contains? (method)">#contains?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#containsChild%3F-instance_method" title="Fox::FXWindow#containsChild? (method)">#containsChild?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#create-instance_method" title="Fox::FXWindow#create (method)">#create</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#createComposeContext-instance_method" title="Fox::FXWindow#createComposeContext (method)">#createComposeContext</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#cursorPosition-instance_method" title="Fox::FXWindow#cursorPosition (method)">#cursorPosition</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#default%3F-instance_method" title="Fox::FXWindow#default? (method)">#default?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#defaultHeight-instance_method" title="Fox::FXWindow#defaultHeight (method)">#defaultHeight</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#defaultWidth-instance_method" title="Fox::FXWindow#defaultWidth (method)">#defaultWidth</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#deleteType-class_method" title="Fox::FXWindow.deleteType (method)">deleteType</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#deleteTypeName-class_method" title="Fox::FXWindow.deleteTypeName (method)">deleteTypeName</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#destroy-instance_method" title="Fox::FXWindow#destroy (method)">#destroy</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#destroyComposeContext-instance_method" title="Fox::FXWindow#destroyComposeContext (method)">#destroyComposeContext</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#detach-instance_method" title="Fox::FXWindow#detach (method)">#detach</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#didAccept-instance_method" title="Fox::FXWindow#didAccept (method)">#didAccept</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#disable-instance_method" title="Fox::FXWindow#disable (method)">#disable</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#doesSaveUnder%3F-instance_method" title="Fox::FXWindow#doesSaveUnder? (method)">#doesSaveUnder?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#dragging%3F-instance_method" title="Fox::FXWindow#dragging? (method)">#dragging?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#dropDisable-instance_method" title="Fox::FXWindow#dropDisable (method)">#dropDisable</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#dropEnable-instance_method" title="Fox::FXWindow#dropEnable (method)">#dropEnable</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#dropEnabled%3F-instance_method" title="Fox::FXWindow#dropEnabled? (method)">#dropEnabled?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#dropFinished-instance_method" title="Fox::FXWindow#dropFinished (method)">#dropFinished</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#dropTarget%3F-instance_method" title="Fox::FXWindow#dropTarget? (method)">#dropTarget?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#each_child-instance_method" title="Fox::FXWindow#each_child (method)">#each_child</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#each_child_recursive-instance_method" title="Fox::FXWindow#each_child_recursive (method)">#each_child_recursive</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#enable-instance_method" title="Fox::FXWindow#enable (method)">#enable</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#enabled%3F-instance_method" title="Fox::FXWindow#enabled? (method)">#enabled?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#endDrag-instance_method" title="Fox::FXWindow#endDrag (method)">#endDrag</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#forceRefresh-instance_method" title="Fox::FXWindow#forceRefresh (method)">#forceRefresh</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#getChildAt-instance_method" title="Fox::FXWindow#getChildAt (method)">#getChildAt</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#getDNDData-instance_method" title="Fox::FXWindow#getDNDData (method)">#getDNDData</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#getHeightForWidth-instance_method" title="Fox::FXWindow#getHeightForWidth (method)">#getHeightForWidth</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#getWidthForHeight-instance_method" title="Fox::FXWindow#getWidthForHeight (method)">#getWidthForHeight</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#grab-instance_method" title="Fox::FXWindow#grab (method)">#grab</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#grabKeyboard-instance_method" title="Fox::FXWindow#grabKeyboard (method)">#grabKeyboard</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#grabbed%3F-instance_method" title="Fox::FXWindow#grabbed? (method)">#grabbed?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#grabbedKeyboard%3F-instance_method" title="Fox::FXWindow#grabbedKeyboard? (method)">#grabbedKeyboard?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#handleDrag-instance_method" title="Fox::FXWindow#handleDrag (method)">#handleDrag</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#hasClipboard%3F-instance_method" title="Fox::FXWindow#hasClipboard? (method)">#hasClipboard?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#hasFocus%3F-instance_method" title="Fox::FXWindow#hasFocus? (method)">#hasFocus?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#hasSelection%3F-instance_method" title="Fox::FXWindow#hasSelection? (method)">#hasSelection?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#height-instance_method" title="Fox::FXWindow#height (method)">#height</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#height%3D-instance_method" title="Fox::FXWindow#height= (method)">#height=</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#hide-instance_method" title="Fox::FXWindow#hide (method)">#hide</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#imageType-class_method" title="Fox::FXWindow.imageType (method)">imageType</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#inFocusChain%3F-instance_method" title="Fox::FXWindow#inFocusChain? (method)">#inFocusChain?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#indexOfChild-instance_method" title="Fox::FXWindow#indexOfChild (method)">#indexOfChild</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#initial%3F-instance_method" title="Fox::FXWindow#initial? (method)">#initial?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#inquireDNDAction-instance_method" title="Fox::FXWindow#inquireDNDAction (method)">#inquireDNDAction</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#inquireDNDTypes-instance_method" title="Fox::FXWindow#inquireDNDTypes (method)">#inquireDNDTypes</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#killFocus-instance_method" title="Fox::FXWindow#killFocus (method)">#killFocus</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#layout-instance_method" title="Fox::FXWindow#layout (method)">#layout</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#linkAfter-instance_method" title="Fox::FXWindow#linkAfter (method)">#linkAfter</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#linkBefore-instance_method" title="Fox::FXWindow#linkBefore (method)">#linkBefore</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#lower-instance_method" title="Fox::FXWindow#lower (method)">#lower</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#move-instance_method" title="Fox::FXWindow#move (method)">#move</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#octetType-class_method" title="Fox::FXWindow.octetType (method)">octetType</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#octetTypeName-class_method" title="Fox::FXWindow.octetTypeName (method)">octetTypeName</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#offeredDNDType%3F-instance_method" title="Fox::FXWindow#offeredDNDType? (method)">#offeredDNDType?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#position-instance_method" title="Fox::FXWindow#position (method)">#position</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#raiseWindow-instance_method" title="Fox::FXWindow#raiseWindow (method)">#raiseWindow</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#recalc-instance_method" title="Fox::FXWindow#recalc (method)">#recalc</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#releaseClipboard-instance_method" title="Fox::FXWindow#releaseClipboard (method)">#releaseClipboard</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#releaseSelection-instance_method" title="Fox::FXWindow#releaseSelection (method)">#releaseSelection</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#remHotKey-instance_method" title="Fox::FXWindow#remHotKey (method)">#remHotKey</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#removeChild-instance_method" title="Fox::FXWindow#removeChild (method)">#removeChild</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#repaint-instance_method" title="Fox::FXWindow#repaint (method)">#repaint</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#reparent-instance_method" title="Fox::FXWindow#reparent (method)">#reparent</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#resize-instance_method" title="Fox::FXWindow#resize (method)">#resize</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#scroll-instance_method" title="Fox::FXWindow#scroll (method)">#scroll</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#setCursorPosition-instance_method" title="Fox::FXWindow#setCursorPosition (method)">#setCursorPosition</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#setDNDData-instance_method" title="Fox::FXWindow#setDNDData (method)">#setDNDData</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#setDefault-instance_method" title="Fox::FXWindow#setDefault (method)">#setDefault</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#setDragRectangle-instance_method" title="Fox::FXWindow#setDragRectangle (method)">#setDragRectangle</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#setFocus-instance_method" title="Fox::FXWindow#setFocus (method)">#setFocus</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#setInitial-instance_method" title="Fox::FXWindow#setInitial (method)">#setInitial</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#setShape-instance_method" title="Fox::FXWindow#setShape (method)">#setShape</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#shell%3F-instance_method" title="Fox::FXWindow#shell? (method)">#shell?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#show-instance_method" title="Fox::FXWindow#show (method)">#show</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#shown%3F-instance_method" title="Fox::FXWindow#shown? (method)">#shown?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#stringType-class_method" title="Fox::FXWindow.stringType (method)">stringType</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#textType-class_method" title="Fox::FXWindow.textType (method)">textType</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#textTypeName-class_method" title="Fox::FXWindow.textTypeName (method)">textTypeName</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#tr-instance_method" title="Fox::FXWindow#tr (method)">#tr</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#translateCoordinatesFrom-instance_method" title="Fox::FXWindow#translateCoordinatesFrom (method)">#translateCoordinatesFrom</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#translateCoordinatesTo-instance_method" title="Fox::FXWindow#translateCoordinatesTo (method)">#translateCoordinatesTo</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#underCursor%3F-instance_method" title="Fox::FXWindow#underCursor? (method)">#underCursor?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#ungrab-instance_method" title="Fox::FXWindow#ungrab (method)">#ungrab</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#ungrabKeyboard-instance_method" title="Fox::FXWindow#ungrabKeyboard (method)">#ungrabKeyboard</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#update-instance_method" title="Fox::FXWindow#update (method)">#update</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#urilistType-class_method" title="Fox::FXWindow.urilistType (method)">urilistType</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#urilistTypeName-class_method" title="Fox::FXWindow.urilistTypeName (method)">urilistTypeName</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#utf16Type-class_method" title="Fox::FXWindow.utf16Type (method)">utf16Type</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#utf16TypeName-class_method" title="Fox::FXWindow.utf16TypeName (method)">utf16TypeName</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#utf8Type-class_method" title="Fox::FXWindow.utf8Type (method)">utf8Type</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#utf8TypeName-class_method" title="Fox::FXWindow.utf8TypeName (method)">utf8TypeName</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#visible%3D-instance_method" title="Fox::FXWindow#visible= (method)">#visible=</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#width-instance_method" title="Fox::FXWindow#width (method)">#width</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXWindow#width%3D-instance_method" title="Fox::FXWindow#width= (method)">#width=</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Responder2" title="Responder2 (module)">Responder2</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Responder2#connect-instance_method" title="Responder2#connect (method)">#connect</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXDrawable" title="Fox::FXDrawable (class)">FXDrawable</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXDrawable#resize-instance_method" title="Fox::FXDrawable#resize (method)">#resize</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXId" title="Fox::FXId (class)">FXId</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXId#create-instance_method" title="Fox::FXId#create (method)">#create</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXId#created%3F-instance_method" title="Fox::FXId#created? (method)">#created?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXId#destroy-instance_method" title="Fox::FXId#destroy (method)">#destroy</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXId#detach-instance_method" title="Fox::FXId#detach (method)">#detach</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXId#runOnUiThread-instance_method" title="Fox::FXId#runOnUiThread (method)">#runOnUiThread</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXObject" title="Fox::FXObject (class)">FXObject</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXObject#bind-instance_method" title="Fox::FXObject#bind (method)">#bind</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXObject#handle-instance_method" title="Fox::FXObject#handle (method)">#handle</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXObject#load-instance_method" title="Fox::FXObject#load (method)">#load</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXObject#save-instance_method" title="Fox::FXObject#save (method)">#save</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXObject#subclasses-class_method" title="Fox::FXObject.subclasses (method)">subclasses</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXTextField%3Ainitialize">permalink</a>
+  
+    #<strong>initialize</strong>(p, ncols, target = nil, selector = 0, opts = TEXTFIELD_NORMAL, x = 0, y = 0, width = 0, height = 0, padLeft = DEFAULT_PAD, padRight = DEFAULT_PAD, padTop = DEFAULT_PAD, padBottom = DEFAULT_PAD)  ⇒ <tt><span class="object_link"><a href="./FXTextField_files/FXTextField.html" title="Fox::FXTextField (class)">FXTextField</a></span></tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("initialize-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXTextField%3Ainitialize">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Return an initialized FXTextField instance. It should be wide enough to
+display <em>ncols</em> columns.</p>
+
+<h4>Parameters:</h4>
+<table class="rdoc-list"><tbody><tr><td class="rdoc-term"><p><tt>p</tt></p></td>
+<td>
+<p>the parent window for this text field <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXComposite" title="Fox::FXComposite (class)">Fox::FXComposite</a></span></p>
+</td></tr><tr><td class="rdoc-term"><p><tt>ncols</tt></p></td>
+<td>
+<p>number of visible items [Integer]</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>target</tt></p></td>
+<td>
+<p>the message target, if any, for this text field <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXObject" title="Fox::FXObject (class)">Fox::FXObject</a></span></p>
+</td></tr><tr><td class="rdoc-term"><p><tt>selector</tt></p></td>
+<td>
+<p>the message identifier for this text field [Integer]</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>opts</tt></p></td>
+<td>
+<p>text field options [Integer]</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>x</tt></p></td>
+<td>
+<p>initial x-position [Integer]</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>y</tt></p></td>
+<td>
+<p>initial y-position [Integer]</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>width</tt></p></td>
+<td>
+<p>initial width [Integer]</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>height</tt></p></td>
+<td>
+<p>initial height [Integer]</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>padLeft</tt></p></td>
+<td>
+<p>internal padding on the left side, in pixels [Integer]</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>padRight</tt></p></td>
+<td>
+<p>internal padding on the right side, in pixels [Integer]</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>padTop</tt></p></td>
+<td>
+<p>internal padding on the top side, in pixels [Integer]</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>padBottom</tt></p></td>
+<td>
+<p>internal padding on the bottom side, in pixels [Integer]</p>
+</td></tr></tbody></table>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#" class="toggleSource">View source</a>]</span><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+118
+119</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXTextField.rb', line 118</span>
+
+<span class="rubyid_def def kw">def</span> <span class="rubyid_initialize identifier id">initialize</span><span class="lparen token">(</span><span class="rubyid_p identifier id">p</span><span class="comma token">,</span> <span class="rubyid_ncols identifier id">ncols</span><span class="comma token">,</span> <span class="rubyid_target identifier id">target</span><span class="assign token">=</span><span class="rubyid_nil nil kw">nil</span><span class="comma token">,</span> <span class="rubyid_selector identifier id">selector</span><span class="assign token">=</span><span class="integer val">0</span><span class="comma token">,</span> <span class="rubyid_opts identifier id">opts</span><span class="assign token">=</span><span class="rubyid_TEXTFIELD_NORMAL constant id">TEXTFIELD_NORMAL</span><span class="comma token">,</span> <span class="rubyid_x identifier id">x</span><span class="assign token">=</span><span class="integer val">0</span><span class="comma token">,</span> <span class="rubyid_y identifier id">y</span><span class="assign token">=</span><span class="integer val">0</span><span class="comma token">,</span> <span class="rubyid_width identifier id">width</span><span class="assign token">=</span><span class="integer val">0</span><span class="comma token">,</span> <span class="rubyid_height identifier id">height</span><span class="assign token">=</span><span class="integer val">0</span><span class="comma token">,</span> <span class="rubyid_padLeft identifier id">padLeft</span><span class="assign token">=</span><span class="rubyid_DEFAULT_PAD constant id">DEFAULT_PAD</span><span class="comma token">,</span> <span class="rubyid_padRight identifier id">padRight</span><span class="assign token">=</span><span class="rubyid_DEFAULT_PAD constant id">DEFAULT_PAD</span><span class="comma token">,</span> <span class="rubyid_padTop identifier id">padTop</span><span class="assign token">=</span><span class="rubyid_DEFAULT_PAD constant id">DEFAULT_PAD</span><span class="comma token">,</span> <span class="rubyid_padBottom identifier id">padBottom</span><span class="assign token">=</span><span class="rubyid_DEFAULT_PAD constant id">DEFAULT_PAD</span><span class="rparen token">)</span> <span class="comment val"># :yields: theTextField</span>
+<span class="rubyid_end end kw">end</span>
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="anchorPos=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="anchorPos-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXTextField%3AanchorPos">permalink</a>
+  
+    #<strong>anchorPos</strong>  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("anchorPos-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXTextField%3AanchorPos">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Anchor position [Integer]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXTextField.rb', line 66</span>
+
+<span class="rubyid_def def kw">def</span> <span class="rubyid_anchorPos identifier id">anchorPos</span>
+  <span class="rubyid_@anchorPos ivar id">@anchorPos</span>
+<span class="rubyid_end end kw">end</span>
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id="cursorPos=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="cursorPos-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXTextField%3AcursorPos">permalink</a>
+  
+    #<strong>cursorPos</strong>  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("cursorPos-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXTextField%3AcursorPos">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Cursor position [Integer]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+63
+64
+65</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXTextField.rb', line 63</span>
+
+<span class="rubyid_def def kw">def</span> <span class="rubyid_cursorPos identifier id">cursorPos</span>
+  <span class="rubyid_@cursorPos ivar id">@cursorPos</span>
+<span class="rubyid_end end kw">end</span>
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="editable=-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXTextField%3Aeditable%3D">permalink</a>
+  
+    #<strong>editable=</strong>(value)  ⇒ <tt>Object</tt>  <span class="extras">(writeonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("editable=-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXTextField%3Aeditable%3D">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Text field editability [Boolean]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+60
+61
+62</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXTextField.rb', line 60</span>
+
+<span class="rubyid_def def kw">def</span> <span class="rubyid_editable= identifier id">editable=</span><span class="lparen token">(</span><span class="rubyid_value identifier id">value</span><span class="rparen token">)</span>
+  <span class="rubyid_@editable ivar id">@editable</span> <span class="assign token">=</span> <span class="rubyid_value identifier id">value</span>
+<span class="rubyid_end end kw">end</span>
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id="font=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="font-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXTextField%3Afont">permalink</a>
+  
+    #<strong>font</strong>  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("font-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXTextField%3Afont">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Text font <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont" title="Fox::FXFont (class)">Fox::FXFont</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+72
+73
+74</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXTextField.rb', line 72</span>
+
+<span class="rubyid_def def kw">def</span> <span class="rubyid_font identifier id">font</span>
+  <span class="rubyid_@font ivar id">@font</span>
+<span class="rubyid_end end kw">end</span>
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id="helpText=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="helpText-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXTextField%3AhelpText">permalink</a>
+  
+    #<strong>helpText</strong>  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("helpText-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXTextField%3AhelpText">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Status line help text [String]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+90
+91
+92</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXTextField.rb', line 90</span>
+
+<span class="rubyid_def def kw">def</span> <span class="rubyid_helpText identifier id">helpText</span>
+  <span class="rubyid_@helpText ivar id">@helpText</span>
+<span class="rubyid_end end kw">end</span>
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id="justify=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="justify-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXTextField%3Ajustify">permalink</a>
+  
+    #<strong>justify</strong>  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("justify-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXTextField%3Ajustify">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Text justification mode, a combination of horizontal justification
+(JUSTIFY_LEFT, JUSTIFY_RIGHT, or JUSTIFY_CENTER_X), and vertical
+justification (JUSTIFY_TOP, JUSTIFY_BOTTOM, JUSTIFY_CENTER_Y) [Integer]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+87
+88
+89</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXTextField.rb', line 87</span>
+
+<span class="rubyid_def def kw">def</span> <span class="rubyid_justify identifier id">justify</span>
+  <span class="rubyid_@justify ivar id">@justify</span>
+<span class="rubyid_end end kw">end</span>
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id="numColumns=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="numColumns-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXTextField%3AnumColumns">permalink</a>
+  
+    #<strong>numColumns</strong>  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("numColumns-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXTextField%3AnumColumns">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Default width of this text field, in terms of a number of columns times the
+width of the numeral '8' [Integer]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+84
+85
+86</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXTextField.rb', line 84</span>
+
+<span class="rubyid_def def kw">def</span> <span class="rubyid_numColumns identifier id">numColumns</span>
+  <span class="rubyid_@numColumns ivar id">@numColumns</span>
+<span class="rubyid_end end kw">end</span>
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id="selBackColor=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="selBackColor-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXTextField%3AselBackColor">permalink</a>
+  
+    #<strong>selBackColor</strong>  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("selBackColor-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXTextField%3AselBackColor">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Background color for selected text <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXColor" title="Fox::FXColor (class)">Fox::FXColor</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+78
+79
+80</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXTextField.rb', line 78</span>
+
+<span class="rubyid_def def kw">def</span> <span class="rubyid_selBackColor identifier id">selBackColor</span>
+  <span class="rubyid_@selBackColor ivar id">@selBackColor</span>
+<span class="rubyid_end end kw">end</span>
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id="selTextColor=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="selTextColor-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXTextField%3AselTextColor">permalink</a>
+  
+    #<strong>selTextColor</strong>  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("selTextColor-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXTextField%3AselTextColor">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Foreground color for selected text <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXColor" title="Fox::FXColor (class)">Fox::FXColor</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+81
+82
+83</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXTextField.rb', line 81</span>
+
+<span class="rubyid_def def kw">def</span> <span class="rubyid_selTextColor identifier id">selTextColor</span>
+  <span class="rubyid_@selTextColor ivar id">@selTextColor</span>
+<span class="rubyid_end end kw">end</span>
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id="text=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="text-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXTextField%3Atext">permalink</a>
+  
+    #<strong>text</strong>  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("text-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXTextField%3Atext">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Text [String]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+69
+70
+71</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXTextField.rb', line 69</span>
+
+<span class="rubyid_def def kw">def</span> <span class="rubyid_text identifier id">text</span>
+  <span class="rubyid_@text ivar id">@text</span>
+<span class="rubyid_end end kw">end</span>
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id="textColor=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="textColor-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXTextField%3AtextColor">permalink</a>
+  
+    #<strong>textColor</strong>  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("textColor-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXTextField%3AtextColor">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Text color <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXColor" title="Fox::FXColor (class)">Fox::FXColor</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+75
+76
+77</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXTextField.rb', line 75</span>
+
+<span class="rubyid_def def kw">def</span> <span class="rubyid_textColor identifier id">textColor</span>
+  <span class="rubyid_@textColor ivar id">@textColor</span>
+<span class="rubyid_end end kw">end</span>
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id="textStyle=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="textStyle-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXTextField%3AtextStyle">permalink</a>
+  
+    #<strong>textStyle</strong>  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("textStyle-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXTextField%3AtextStyle">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Text style [Integer]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+96
+97
+98</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXTextField.rb', line 96</span>
+
+<span class="rubyid_def def kw">def</span> <span class="rubyid_textStyle identifier id">textStyle</span>
+  <span class="rubyid_@textStyle ivar id">@textStyle</span>
+<span class="rubyid_end end kw">end</span>
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id="tipText=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="tipText-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXTextField%3AtipText">permalink</a>
+  
+    #<strong>tipText</strong>  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("tipText-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXTextField%3AtipText">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Tool tip message [String]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+93
+94
+95</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXTextField.rb', line 93</span>
+
+<span class="rubyid_def def kw">def</span> <span class="rubyid_tipText identifier id">tipText</span>
+  <span class="rubyid_@tipText ivar id">@tipText</span>
+<span class="rubyid_end end kw">end</span>
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="editable?-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXTextField%3Aeditable%3F">permalink</a>
+  
+    #<strong>editable?</strong>  ⇒ <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("editable?-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXTextField%3Aeditable%3F">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Return <tt>true</tt> if text field may be edited</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><span class="showSource">[<a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#" class="toggleSource">View source</a>]</span><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+122</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXTextField.rb', line 122</span>
+
+<span class="rubyid_def def kw">def</span> <span class="rubyid_editable? fid id">editable?</span><span class="lparen token">(</span><span class="rparen token">)</span> <span class="semicolon token">;</span> <span class="rubyid_end end kw">end</span>
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="extendSelection-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXTextField%3AextendSelection">permalink</a>
+  
+    #<strong>extendSelection</strong>(pos)  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("extendSelection-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXTextField%3AextendSelection">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Extend the selection from the anchor to the given position <em>pos</em>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#" class="toggleSource">View source</a>]</span><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+137</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXTextField.rb', line 137</span>
+
+<span class="rubyid_def def kw">def</span> <span class="rubyid_extendSelection identifier id">extendSelection</span><span class="lparen token">(</span><span class="rubyid_pos identifier id">pos</span><span class="rparen token">)</span> <span class="semicolon token">;</span> <span class="rubyid_end end kw">end</span>
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="killSelection-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXTextField%3AkillSelection">permalink</a>
+  
+    #<strong>killSelection</strong>  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("killSelection-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXTextField%3AkillSelection">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Unselect the text</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#" class="toggleSource">View source</a>]</span><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+140</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXTextField.rb', line 140</span>
+
+<span class="rubyid_def def kw">def</span> <span class="rubyid_killSelection identifier id">killSelection</span><span class="lparen token">(</span><span class="rparen token">)</span> <span class="semicolon token">;</span> <span class="rubyid_end end kw">end</span>
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="makePositionVisible-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXTextField%3AmakePositionVisible">permalink</a>
+  
+    #<strong>makePositionVisible</strong>(pos)  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("makePositionVisible-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXTextField%3AmakePositionVisible">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Scroll text to make the given position <em>pos</em> visible.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#" class="toggleSource">View source</a>]</span><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+149</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXTextField.rb', line 149</span>
+
+<span class="rubyid_def def kw">def</span> <span class="rubyid_makePositionVisible identifier id">makePositionVisible</span><span class="lparen token">(</span><span class="rubyid_pos identifier id">pos</span><span class="rparen token">)</span> <span class="semicolon token">;</span> <span class="rubyid_end end kw">end</span>
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="overstrike=-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXTextField%3Aoverstrike%3D">permalink</a>
+  
+    #<strong>overstrike=</strong>(os)  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("overstrike=-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXTextField%3Aoverstrike%3D">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Set overstrike mode to <tt>true</tt> or <tt>false</tt>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#" class="toggleSource">View source</a>]</span><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+125</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXTextField.rb', line 125</span>
+
+<span class="rubyid_def def kw">def</span> <span class="rubyid_overstrike= identifier id">overstrike=</span><span class="lparen token">(</span><span class="rubyid_os identifier id">os</span><span class="rparen token">)</span><span class="semicolon token">;</span> <span class="rubyid_end end kw">end</span>
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="overstrike?-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXTextField%3Aoverstrike%3F">permalink</a>
+  
+    #<strong>overstrike?</strong>  ⇒ <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("overstrike?-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXTextField%3Aoverstrike%3F">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Return <tt>true</tt> if overstrike mode is set.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><span class="showSource">[<a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#" class="toggleSource">View source</a>]</span><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+128</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXTextField.rb', line 128</span>
+
+<span class="rubyid_def def kw">def</span> <span class="rubyid_overstrike? fid id">overstrike?</span><span class="semicolon token">;</span> <span class="rubyid_end end kw">end</span>
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="posSelected?-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXTextField%3AposSelected%3F">permalink</a>
+  
+    #<strong>posSelected?</strong>(pos)  ⇒ <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("posSelected?-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXTextField%3AposSelected%3F">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Return <tt>true</tt> if position <em>pos</em> is selected.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><span class="showSource">[<a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#" class="toggleSource">View source</a>]</span><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+143</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXTextField.rb', line 143</span>
+
+<span class="rubyid_def def kw">def</span> <span class="rubyid_posSelected? fid id">posSelected?</span><span class="lparen token">(</span><span class="rubyid_pos identifier id">pos</span><span class="rparen token">)</span> <span class="semicolon token">;</span> <span class="rubyid_end end kw">end</span>
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="posVisible?-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXTextField%3AposVisible%3F">permalink</a>
+  
+    #<strong>posVisible?</strong>(pos)  ⇒ <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("posVisible?-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXTextField%3AposVisible%3F">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Return <tt>true</tt> if position <em>pos</em> is fully visible.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><span class="showSource">[<a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#" class="toggleSource">View source</a>]</span><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+146</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXTextField.rb', line 146</span>
+
+<span class="rubyid_def def kw">def</span> <span class="rubyid_posVisible? fid id">posVisible?</span><span class="lparen token">(</span><span class="rubyid_pos identifier id">pos</span><span class="rparen token">)</span> <span class="semicolon token">;</span> <span class="rubyid_end end kw">end</span>
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="selectAll-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXTextField%3AselectAll">permalink</a>
+  
+    #<strong>selectAll</strong>  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("selectAll-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXTextField%3AselectAll">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Select all text</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#" class="toggleSource">View source</a>]</span><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXTextField.rb', line 131</span>
+
+<span class="rubyid_def def kw">def</span> <span class="rubyid_selectAll identifier id">selectAll</span><span class="lparen token">(</span><span class="rparen token">)</span><span class="semicolon token">;</span> <span class="rubyid_end end kw">end</span>
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="setSelection-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXTextField%3AsetSelection">permalink</a>
+  
+    #<strong>setSelection</strong>(pos, len)  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("setSelection-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXTextField%3AsetSelection">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Select <em>len</em> characters starting at given position <em>pos</em>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="http://www.rubydoc.info/gems/fxruby/Fox/FXTextField#" class="toggleSource">View source</a>]</span><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+134</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXTextField.rb', line 134</span>
+
+<span class="rubyid_def def kw">def</span> <span class="rubyid_setSelection identifier id">setSelection</span><span class="lparen token">(</span><span class="rubyid_pos identifier id">pos</span><span class="comma token">,</span> <span class="rubyid_len identifier id">len</span><span class="rparen token">)</span> <span class="semicolon token">;</span> <span class="rubyid_end end kw">end</span>
+</pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Sep  7 11:58:19 2015 by
+  <a href="http://yardoc.org/" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 (ruby-2.1.4).
+</div>
+
+
+  <script src="./FXTextField_files/js" type="text/javascript"></script>
+  <script type="text/javascript">clicky.init(246206);</script>
+  <noscript>&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="http://static.getclicky.com/246206ns.gif" /&gt;&lt;/p&gt;</noscript>
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-7172246-5', 'auto');
+  ga('send', 'pageview');
+  </script>
+
+
+    </div>
+  
+</body></html>

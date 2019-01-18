@@ -1,0 +1,3161 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://www.rubydoc.info/gems/fxruby/Fox/FXFont -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Fox::FXFont
+  
+    — Documentation for fxruby (1.6.33)
+  
+</title>
+
+  <link rel="stylesheet" href="./FXFont_files/style.css" type="text/css" charset="utf-8">
+
+  <link rel="stylesheet" href="./FXFont_files/common.css" type="text/css" charset="utf-8">
+
+  <link rel="stylesheet" href="./FXFont_files/custom.css" type="text/css" charset="utf-8">
+
+<script async="" src="./FXFont_files/analytics.js"></script><script type="text/javascript" charset="utf-8">
+  pathId = "Fox::FXFont"
+  relpath = '/';
+  docsPrefix = 'gems/fxruby';
+  listPrefix = 'list/gems/fxruby';
+  searchPrefix = 'search/gems/fxruby';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="./FXFont_files/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="./FXFont_files/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="./FXFont_files/autocomplete.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="./FXFont_files/rubydoc_custom.js"></script>
+
+
+  <script type="text/javascript" async="" src="./FXFont_files/in.php"></script><script type="text/javascript" async="" src="./FXFont_files/in(1).php"></script><script type="text/javascript" async="" src="./FXFont_files/in(2).php"></script><script type="text/javascript" async="" src="./FXFont_files/in(3).php"></script><script type="text/javascript" async="" src="./FXFont_files/in(4).php"></script><script type="text/javascript" async="" src="./FXFont_files/in(5).php"></script><script type="text/javascript" async="" src="./FXFont_files/in(6).php"></script><script type="text/javascript" async="" src="./FXFont_files/in(7).php"></script></head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="./FXFont_files/class.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <form class="search" method="get" action="http://www.rubydoc.info/search/gems/fxruby">
+  <input name="q" type="search" placeholder="Search" id="search_box" size="30" value="" autocomplete="off" class="ac_input">
+</form>
+<script type="text/javascript" charset="utf-8">
+  $(function() {
+    $('#search_box').autocomplete($('#search_box').parent().attr('action'), {
+      width: 200,
+      formatItem: function(item) {
+        var values = item[0].split(",");
+        return values[0] + (values[1] == '' ? "" : " <small>(" + values[1] + ")</small>");
+      }
+    }).result(function(event, item) {
+      var values = item[0].split(",")
+      $('#search_box').val(values[1]);
+      location.href = values[3];
+      return false;
+    });
+  });
+</script>
+
+<div id="menu">
+  
+    <a href="http://www.rubydoc.info/gems" target="_top">Libraries</a> »
+    <span class="title">fxruby <small>(1.6.33)</small></span>
+  
+  
+    »
+    <a href="http://www.rubydoc.info/gems/fxruby/index">Index (F)</a> »
+    <span class="title"><span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox" title="Fox (module)">Fox</a></span></span>
+     » 
+    <span class="title">FXFont</span>
+  
+</div>
+
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link" href="./FXFont_files/class.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="./FXFont_files/class.html"></iframe>
+
+      <div id="content"><h1>Class: Fox::FXFont
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXId" title="Fox::FXId (class)">FXId</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXObject" title="Fox::FXObject (class)">FXObject</a></span></li>
+          
+            <li class="next"><span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXId" title="Fox::FXId (class)">FXId</a></span></li>
+          
+            <li class="next">Fox::FXFont</li>
+          
+        </ul>
+        <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>rdoc-sources/FXFont.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Font class</p>
+
+<h3>Font pitch hints</h3>
+<table class="rdoc-list"><tbody><tr><td class="rdoc-term"><p><tt>Fixed</tt></p></td>
+<td>
+<p>Fixed pitch, mono-spaced</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>Variable</tt></p></td>
+<td>
+<p>Variable pitch, proportional spacing</p>
+</td></tr></tbody></table>
+
+<h3>Font style hints</h3>
+<table class="rdoc-list"><tbody><tr><td class="rdoc-term"><p><tt>Decorative</tt></p></td>
+<td>
+<p>Fancy fonts</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>Modern</tt></p></td>
+<td>
+<p>Monospace typewriter font</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>Roman</tt></p></td>
+<td>
+<p>Variable width times-like font, serif</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>Script</tt></p></td>
+<td>
+<p>Script or cursive</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>Swiss</tt></p></td>
+<td>
+<p>Helvetica/swiss type font, sans-serif</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>System</tt></p></td>
+<td>
+<p>System font</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>X11</tt></p></td>
+<td>
+<p>Raw X11 font string</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>Scalable</tt></p></td>
+<td>
+<p>Scalable fonts</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>Polymorphic</tt></p></td>
+<td>
+<p>Polymorphic fonts, e.g. parametric weight, slant, etc.</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>Rotatable</tt></p></td>
+<td>
+<p>Rotatable fonts</p>
+</td></tr></tbody></table>
+
+<h3>Font slant options</h3>
+<table class="rdoc-list"><tbody><tr><td class="rdoc-term"><p><tt>ReverseOblique</tt></p></td>
+<td>
+<p>Reversed oblique</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>ReverseItalic</tt></p></td>
+<td>
+<p>Reversed italic</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>Straight</tt></p></td>
+<td>
+<p>Straight, not slanted</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>Italic</tt></p></td>
+<td>
+<p>Italics</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>Oblique</tt></p></td>
+<td>
+<p>Oblique slant</p>
+</td></tr></tbody></table>
+
+<h3>Font weight options</h3>
+<table class="rdoc-list"><tbody><tr><td class="rdoc-term"><p><tt>Thin</tt></p></td>
+<td>
+<p>Thin</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>ExtraLight</tt></p></td>
+<td>
+<p>Extra light</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>Light</tt></p></td>
+<td>
+<p>Light</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>Normal</tt></p></td>
+<td>
+<p>Normal or regular weight</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>Medium</tt></p></td>
+<td>
+<p>Medium bold face</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>DemiBold</tt></p></td>
+<td>
+<p>Demi bold face</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>Bold</tt></p></td>
+<td>
+<p>Bold face</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>ExtraBold</tt></p></td>
+<td>
+<p>Extra</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>Black</tt></p></td>
+<td>
+<p>Black</p>
+</td></tr></tbody></table>
+
+<h3>Condensed or expanded options</h3>
+<table class="rdoc-list"><tbody><tr><td class="rdoc-term"><p><tt>UltraCondensed</tt></p></td>
+<td>
+<p>Ultra condensed printing</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>ExtraCondensed</tt></p></td>
+<td>
+<p>Extra condensed</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>Condensed</tt></p></td>
+<td>
+<p>Condensed</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>SemiCondensed</tt></p></td>
+<td>
+<p>Semi-condensed</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>NonExpanded</tt></p></td>
+<td>
+<p>Regular printing</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>SemiExpanded</tt></p></td>
+<td>
+<p>Semi expanded</p>
+</td></tr></tbody></table>
+
+<p><tt>Expanded</tt>:; Expanded</p>
+<table class="rdoc-list"><tbody><tr><td class="rdoc-term"><p><tt>ExtraExpanded</tt></p></td>
+<td>
+<p>Extra expanded</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>UltraExpanded</tt></p></td>
+<td>
+<p>Ultra expanded</p>
+</td></tr></tbody></table>
+
+<h3>Font character set encoding</h3>
+<table class="rdoc-list"><tbody><tr><td class="rdoc-term"><p><tt>FONTENCODING_DEFAULT</tt></p></td>
+<td>
+<p>Don't care character encoding</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_ISO_8859_1</tt></p></td>
+<td>
+<p>West European (Latin1)</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_ISO_8859_2</tt></p></td>
+<td>
+<p>Central and East European (Latin2)</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_ISO_8859_3</tt></p></td>
+<td>
+<p>Esperanto (Latin3)</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_ISO_8859_4</tt></p></td>
+<td>
+<p>ISO-8859-4 character encoding</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_ISO_8859_5</tt></p></td>
+<td>
+<p>Cyrillic (almost obsolete)</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_ISO_8859_6</tt></p></td>
+<td>
+<p>Arabic</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_ISO_8859_7</tt></p></td>
+<td>
+<p>Greek</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_ISO_8859_8</tt></p></td>
+<td>
+<p>Hebrew</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_ISO_8859_9</tt></p></td>
+<td>
+<p>Turkish (Latin5)</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_ISO_8859_10</tt></p></td>
+<td>
+<p>ISO-8859-10 character encoding</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_ISO_8859_11</tt></p></td>
+<td>
+<p>Thai</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_ISO_8859_13</tt></p></td>
+<td>
+<p>Baltic</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_ISO_8859_14</tt></p></td>
+<td>
+<p>ISO-8859-14 character encoding</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_ISO_8859_15</tt></p></td>
+<td>
+<p>ISO-8859-15 character encoding</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_ISO_8859_16</tt></p></td>
+<td>
+<p>ISO-8859-16 character encoding</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_KOI8</tt></p></td>
+<td>
+<p>KOI-8 character encoding</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_KOI8_R</tt></p></td>
+<td>
+<p>Russian</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_KOI8_U</tt></p></td>
+<td>
+<p>Ukrainian</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_KOI8_UNIFIED</tt></p></td>
+<td>
+<p>x</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP437</tt></p></td>
+<td>
+<p>IBM-PC code page</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP850</tt></p></td>
+<td>
+<p>IBM-PC Multilingual</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP851</tt></p></td>
+<td>
+<p>IBM-PC Greek</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP852</tt></p></td>
+<td>
+<p>IBM-PC Latin2</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP855</tt></p></td>
+<td>
+<p>IBM-PC Cyrillic</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP856</tt></p></td>
+<td>
+<p>IBM-PC Hebrew</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP857</tt></p></td>
+<td>
+<p>IBM-PC Turkish</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP860</tt></p></td>
+<td>
+<p>IBM-PC Portugese</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP861</tt></p></td>
+<td>
+<p>IBM-PC Iceland</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP862</tt></p></td>
+<td>
+<p>IBM-PC Israel</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP863</tt></p></td>
+<td>
+<p>IBM-PC Canadian/French</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP864</tt></p></td>
+<td>
+<p>IBM-PC Arabic</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP865</tt></p></td>
+<td>
+<p>IBM-PC Nordic</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP866</tt></p></td>
+<td>
+<p>IBM-PC Cyrillic #2</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP869</tt></p></td>
+<td>
+<p>IBM-PC Greek #2</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP870</tt></p></td>
+<td>
+<p>Latin-2 Multilingual</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP1250</tt></p></td>
+<td>
+<p>Windows Central European</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP1251</tt></p></td>
+<td>
+<p>Windows Russian</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP1252</tt></p></td>
+<td>
+<p>Windows Latin1</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP1253</tt></p></td>
+<td>
+<p>Windows Greek</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP1254</tt></p></td>
+<td>
+<p>Windows Turkish</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP1255</tt></p></td>
+<td>
+<p>Windows Hebrew</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP1256</tt></p></td>
+<td>
+<p>Windows Arabic</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP1257</tt></p></td>
+<td>
+<p>Windows Baltic</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP1258</tt></p></td>
+<td>
+<p>Windows Vietnam</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CP874</tt></p></td>
+<td>
+<p>Windows Thai</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_UNICODE</tt></p></td>
+<td>
+<p>Unicode</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_LATIN1</tt></p></td>
+<td>
+<p>same as <tt>FONTENCODING_ISO_8859_1</tt>, Latin 1 (West European)</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_LATIN2</tt></p></td>
+<td>
+<p>same as <tt>FONTENCODING_ISO_8859_2</tt>, Latin 2 (East European)</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_LATIN3</tt></p></td>
+<td>
+<p>same as <tt>FONTENCODING_ISO_8859_3</tt>, Latin 3 (South European)</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_LATIN4</tt></p></td>
+<td>
+<p>same as <tt>FONTENCODING_ISO_8859_4</tt>, Latin 4 (North European)</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_LATIN5</tt></p></td>
+<td>
+<p>same as <tt>FONTENCODING_ISO_8859_9</tt>, Latin 5 (Turkish)</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_LATIN6</tt></p></td>
+<td>
+<p>same as <tt>FONTENCODING_ISO_8859_10</tt>, Latin 6 (Nordic)</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_LATIN7</tt></p></td>
+<td>
+<p>same as <tt>FONTENCODING_ISO_8859_13</tt>, Latin 7 (Baltic Rim)</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_LATIN8</tt></p></td>
+<td>
+<p>same as <tt>FONTENCODING_ISO_8859_14</tt>, Latin 8 (Celtic)</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_LATIN9</tt></p></td>
+<td>
+<p>same as <tt>FONTENCODING_ISO_8859_15</tt>, Latin 9 (a.k.a. Latin 0)</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_LATIN10</tt></p></td>
+<td>
+<p>same as <tt>FONTENCODING_ISO_8859_16</tt>, Latin 10</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_USASCII</tt></p></td>
+<td>
+<p>same as <tt>FONTENCODING_ISO_8859_1</tt>, Latin 1</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_WESTEUROPE</tt></p></td>
+<td>
+<p>same as <tt>FONTENCODING_ISO_8859_1</tt>, Latin 1 (West European)</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_EASTEUROPE</tt></p></td>
+<td>
+<p>same as <tt>FONTENCODING_ISO_8859_2</tt>, Latin 2 (East European)</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_SOUTHEUROPE</tt></p></td>
+<td>
+<p>same as <tt>FONTENCODING_ISO_8859_3</tt>, Latin 3 (South European)</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_NORTHEUROPE</tt></p></td>
+<td>
+<p>same as <tt>FONTENCODING_ISO_8859_4</tt>, Latin 4 (North European)</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CYRILLIC</tt></p></td>
+<td>
+<p>same as <tt>FONTENCODING_ISO_8859_5</tt>, Cyrillic</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_RUSSIAN</tt></p></td>
+<td>
+<p>same as <tt>FONTENCODING_KOI8</tt>, Cyrillic</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_ARABIC</tt></p></td>
+<td>
+<p>same as <tt>FONTENCODING_ISO_8859_6</tt>, Arabic</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_GREEK</tt></p></td>
+<td>
+<p>same as <tt>FONTENCODING_ISO_8859_7</tt>, Greek</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_HEBREW</tt></p></td>
+<td>
+<p>same as <tt>FONTENCODING_ISO_8859_8</tt>, Hebrew</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_TURKISH</tt></p></td>
+<td>
+<p>same as <tt>FONTENCODING_ISO_8859_9</tt>, Latin 5 (Turkish)</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_NORDIC</tt></p></td>
+<td>
+<p>same as <tt>FONTENCODING_ISO_8859_10</tt>, Latin 6 (Nordic)</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_THAI</tt></p></td>
+<td>
+<p>same as <tt>FONTENCODING_ISO_8859_11</tt>, Thai</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_BALTIC</tt></p></td>
+<td>
+<p>same as <tt>FONTENCODING_ISO_8859_13</tt>, Latin 7 (Baltic Rim)</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>FONTENCODING_CELTIC</tt></p></td>
+<td>
+<p>same as &lt;tt&gt;FONTENCODING_ISO_8859_14, Latin 8 (Celtic)</p>
+</td></tr></tbody></table>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#actualEncoding-instance_method" title="#actualEncoding (instance method)">#<strong>actualEncoding</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Actual encoding [Integer].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#actualName-instance_method" title="#actualName (instance method)">#<strong>actualName</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Actual font family name [String].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#actualSetWidth-instance_method" title="#actualSetWidth (instance method)">#<strong>actualSetWidth</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Actual set width [Integer].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#actualSize-instance_method" title="#actualSize (instance method)">#<strong>actualSize</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Actual size in deci-points [Integer].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#actualSlant-instance_method" title="#actualSlant (instance method)">#<strong>actualSlant</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Actual slant [Integer].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#actualWeight-instance_method" title="#actualWeight (instance method)">#<strong>actualWeight</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Actual font weight [Integer].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#angle-instance_method" title="#angle (instance method)">#<strong>angle</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Font angle [Integer].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#encoding-instance_method" title="#encoding (instance method)">#<strong>encoding</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Encoding [Integer].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#family-instance_method" title="#family (instance method)">#<strong>family</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Family part of name [String].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#fontAscent-instance_method" title="#fontAscent (instance method)">#<strong>fontAscent</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Ascent from baseline [Integer].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#fontDesc-instance_method" title="#fontDesc (instance method)">#<strong>fontDesc</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Font description <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFontDesc" title="Fox::FXFontDesc (class)">FXFontDesc</a></span>.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#fontDescent-instance_method" title="#fontDescent (instance method)">#<strong>fontDescent</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Descent from baseline [Integer].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#fontHeight-instance_method" title="#fontHeight (instance method)">#<strong>fontHeight</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Height of tallest character in font [Integer].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#fontLeading-instance_method" title="#fontLeading (instance method)">#<strong>fontLeading</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Font leading [Integer].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#fontSpacing-instance_method" title="#fontSpacing (instance method)">#<strong>fontSpacing</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Font line spacing [Integer].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#fontWidth-instance_method" title="#fontWidth (instance method)">#<strong>fontWidth</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Width of widest character in font [Integer].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#foundry-instance_method" title="#foundry (instance method)">#<strong>foundry</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Foundry part of name [String].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#hints-instance_method" title="#hints (instance method)">#<strong>hints</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Hints [Integer].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#maxChar-instance_method" title="#maxChar (instance method)">#<strong>maxChar</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Last character glyph in font [Integer].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#name-instance_method" title="#name (instance method)">#<strong>name</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Font family name [String].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#setWidth-instance_method" title="#setWidth (instance method)">#<strong>setWidth</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Set width [Integer].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#size-instance_method" title="#size (instance method)">#<strong>size</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Size in decipoints [Integer].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#slant-instance_method" title="#slant (instance method)">#<strong>slant</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Slant [Integer].</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#weight-instance_method" title="#weight (instance method)">#<strong>weight</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Font weight [Integer].</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXId" title="Fox::FXId (class)">FXId</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXId#app-instance_method" title="Fox::FXId#app (method)">#app</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXId#userData-instance_method" title="Fox::FXId#userData (method)">#userData</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXId#xid-instance_method" title="Fox::FXId#xid (method)">#xid</a></span></p>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#listFonts-class_method" title="listFonts (class method)">.<strong>listFonts</strong>(face, weight = 0, slant = 0, setWidth = 0, encoding = 0, hints = 0)  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>List all fonts matching hints.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#fontMono%3F-instance_method" title="#fontMono? (instance method)">#<strong>fontMono?</strong>  ⇒ Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Return <tt>true</tt> if font is monospaced.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#getCharWidth-instance_method" title="#getCharWidth (instance method)">#<strong>getCharWidth</strong>(ch)  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Calculate width of single wide character <em>ch</em> in this font.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#getFont-instance_method" title="#getFont (instance method)">#<strong>getFont</strong>  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Return the font description as a string suitable for parsing with
+<span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#setFont-instance_method" title="Fox::FXFont#setFont (method)">#setFont</a></span>, see above.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#getTextHeight-instance_method" title="#getTextHeight (instance method)">#<strong>getTextHeight</strong>(text)  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Returns the height of given <em>text</em> in this font.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#getTextWidth-instance_method" title="#getTextWidth (instance method)">#<strong>getTextWidth</strong>(text)  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Returns the width of given <em>text</em> in this font.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#hasChar%3F-instance_method" title="#hasChar? (instance method)">#<strong>hasChar?</strong>(ch)  ⇒ Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Return <tt>true</tt> if font has glyph for <em>ch</em>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(a, string)  ⇒ FXFont </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Construct a font with given font description of the form:.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#leftBearing-instance_method" title="#leftBearing (instance method)">#<strong>leftBearing</strong>(ch)  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Returns the left-side bearing (the distance from the origin to the leftmost
+pixel in the character) for <em>ch</em>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#rightBearing-instance_method" title="#rightBearing (instance method)">#<strong>rightBearing</strong>(ch)  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Returns the right-side bearing (the distance from the origin to the
+rightmost pixel in the character) for <em>ch</em>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#setFont-instance_method" title="#setFont (instance method)">#<strong>setFont</strong>(string)  ⇒ Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class="inline">
+<p>Change the font to the specified font description string.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXId" title="Fox::FXId (class)">FXId</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXId#create-instance_method" title="Fox::FXId#create (method)">#create</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXId#created%3F-instance_method" title="Fox::FXId#created? (method)">#created?</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXId#destroy-instance_method" title="Fox::FXId#destroy (method)">#destroy</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXId#detach-instance_method" title="Fox::FXId#detach (method)">#detach</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXId#runOnUiThread-instance_method" title="Fox::FXId#runOnUiThread (method)">#runOnUiThread</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXObject" title="Fox::FXObject (class)">FXObject</a></span></h3>
+  <p class="inherited"><span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXObject#bind-instance_method" title="Fox::FXObject#bind (method)">#bind</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXObject#handle-instance_method" title="Fox::FXObject#handle (method)">#handle</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXObject#load-instance_method" title="Fox::FXObject#load (method)">#load</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXObject#save-instance_method" title="Fox::FXObject#save (method)">#save</a></span>, <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXObject#subclasses-class_method" title="Fox::FXObject.subclasses (method)">subclasses</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3Ainitialize">permalink</a>
+  
+    #<strong>initialize</strong>(a, string)  ⇒ <tt><span class="object_link"><a href="./FXFont_files/FXFont.html" title="Fox::FXFont (class)">FXFont</a></span></tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("initialize-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3Ainitialize">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Construct a font with given font description of the form:</p>
+
+<pre class="code ruby"><code class="ruby">    fontname [ "[" foundry "]" ] ["," size ["," weight ["," slant ["," setwidth ["," encoding ["," hints]]]]]]
+
+For example:
+
+    "helvetica [bitstream],120,bold,italic,normal,iso8859-1,0"
+
+Typically, at least the font name, and size must be given for
+normal font matching.  As a special case, raw X11 fonts can also be
+passed, for example:
+
+    "9x15bold"</code></pre>
+
+<p>Note: use of the raw X11 fonts is stronly discouraged.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#" class="toggleSource">View source</a>]</span><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+258
+259</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 258</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_initialize">initialize</span><span class="lparen">(</span><span class="id identifier rubyid_a">a</span><span class="comma">,</span> <span class="id identifier rubyid_fontDesc">fontDesc</span><span class="rparen">)</span> <span class="comment"># :yields: theFont
+</span><span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="actualEncoding-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3AactualEncoding">permalink</a>
+  
+    #<strong>actualEncoding</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("actualEncoding-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3AactualEncoding">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Actual encoding [Integer]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+206
+207
+208</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 206</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_actualEncoding">actualEncoding</span>
+  <span class="ivar">@actualEncoding</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="actualName-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3AactualName">permalink</a>
+  
+    #<strong>actualName</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("actualName-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3AactualName">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Actual font family name [String]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+182
+183
+184</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 182</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_actualName">actualName</span>
+  <span class="ivar">@actualName</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="actualSetWidth-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3AactualSetWidth">permalink</a>
+  
+    #<strong>actualSetWidth</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("actualSetWidth-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3AactualSetWidth">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Actual set width [Integer]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+212
+213
+214</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 212</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_actualSetWidth">actualSetWidth</span>
+  <span class="ivar">@actualSetWidth</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="actualSize-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3AactualSize">permalink</a>
+  
+    #<strong>actualSize</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("actualSize-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3AactualSize">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Actual size in deci-points [Integer]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+188
+189
+190</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 188</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_actualSize">actualSize</span>
+  <span class="ivar">@actualSize</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="actualSlant-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3AactualSlant">permalink</a>
+  
+    #<strong>actualSlant</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("actualSlant-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3AactualSlant">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Actual slant [Integer]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+200
+201
+202</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 200</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_actualSlant">actualSlant</span>
+  <span class="ivar">@actualSlant</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="actualWeight-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3AactualWeight">permalink</a>
+  
+    #<strong>actualWeight</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("actualWeight-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3AactualWeight">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Actual font weight [Integer]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+194
+195
+196</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 194</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_actualWeight">actualWeight</span>
+  <span class="ivar">@actualWeight</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id="angle=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="angle-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3Aangle">permalink</a>
+  
+    #<strong>angle</strong>  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("angle-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3Aangle">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Font angle [Integer]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+221
+222
+223</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 221</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_angle">angle</span>
+  <span class="ivar">@angle</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="encoding-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3Aencoding">permalink</a>
+  
+    #<strong>encoding</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("encoding-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3Aencoding">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Encoding [Integer]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+203
+204
+205</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 203</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_encoding">encoding</span>
+  <span class="ivar">@encoding</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="family-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3Afamily">permalink</a>
+  
+    #<strong>family</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("family-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3Afamily">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Family part of name [String]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+173
+174
+175</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 173</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_family">family</span>
+  <span class="ivar">@family</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="fontAscent-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3AfontAscent">permalink</a>
+  
+    #<strong>fontAscent</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("fontAscent-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3AfontAscent">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Ascent from baseline [Integer]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+239
+240
+241</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 239</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_fontAscent">fontAscent</span>
+  <span class="ivar">@fontAscent</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id="fontDesc=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="fontDesc-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3AfontDesc">permalink</a>
+  
+    #<strong>fontDesc</strong>  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("fontDesc-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3AfontDesc">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Font description <span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFontDesc" title="Fox::FXFontDesc (class)">Fox::FXFontDesc</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+218
+219
+220</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 218</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_fontDesc">fontDesc</span>
+  <span class="ivar">@fontDesc</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="fontDescent-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3AfontDescent">permalink</a>
+  
+    #<strong>fontDescent</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("fontDescent-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3AfontDescent">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Descent from baseline [Integer]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+242
+243
+244</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 242</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_fontDescent">fontDescent</span>
+  <span class="ivar">@fontDescent</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="fontHeight-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3AfontHeight">permalink</a>
+  
+    #<strong>fontHeight</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("fontHeight-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3AfontHeight">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Height of tallest character in font [Integer]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+236
+237
+238</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 236</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_fontHeight">fontHeight</span>
+  <span class="ivar">@fontHeight</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="fontLeading-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3AfontLeading">permalink</a>
+  
+    #<strong>fontLeading</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("fontLeading-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3AfontLeading">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Font leading [Integer]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+245
+246
+247</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 245</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_fontLeading">fontLeading</span>
+  <span class="ivar">@fontLeading</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="fontSpacing-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3AfontSpacing">permalink</a>
+  
+    #<strong>fontSpacing</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("fontSpacing-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3AfontSpacing">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Font line spacing [Integer]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+248
+249
+250</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 248</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_fontSpacing">fontSpacing</span>
+  <span class="ivar">@fontSpacing</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="fontWidth-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3AfontWidth">permalink</a>
+  
+    #<strong>fontWidth</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("fontWidth-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3AfontWidth">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Width of widest character in font [Integer]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+233
+234
+235</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 233</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_fontWidth">fontWidth</span>
+  <span class="ivar">@fontWidth</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="foundry-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3Afoundry">permalink</a>
+  
+    #<strong>foundry</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("foundry-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3Afoundry">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Foundry part of name [String]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+176
+177
+178</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 176</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_foundry">foundry</span>
+  <span class="ivar">@foundry</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="hints-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3Ahints">permalink</a>
+  
+    #<strong>hints</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("hints-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3Ahints">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Hints [Integer]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+215
+216
+217</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 215</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_hints">hints</span>
+  <span class="ivar">@hints</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="maxChar-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3AmaxChar">permalink</a>
+  
+    #<strong>maxChar</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("maxChar-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3AmaxChar">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Last character glyph in font [Integer]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+230
+231
+232</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 230</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_maxChar">maxChar</span>
+  <span class="ivar">@maxChar</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="name-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3Aname">permalink</a>
+  
+    #<strong>name</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("name-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3Aname">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Font family name [String]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+179
+180
+181</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 179</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_name">name</span>
+  <span class="ivar">@name</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="setWidth-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3AsetWidth">permalink</a>
+  
+    #<strong>setWidth</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("setWidth-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3AsetWidth">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Set width [Integer]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+209
+210
+211</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 209</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_setWidth">setWidth</span>
+  <span class="ivar">@setWidth</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="size-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3Asize">permalink</a>
+  
+    #<strong>size</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("size-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3Asize">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Size in decipoints [Integer]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+185
+186
+187</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 185</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_size">size</span>
+  <span class="ivar">@size</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="slant-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3Aslant">permalink</a>
+  
+    #<strong>slant</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("slant-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3Aslant">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Slant [Integer]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+197
+198
+199</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 197</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_slant">slant</span>
+  <span class="ivar">@slant</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="weight-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3Aweight">permalink</a>
+  
+    #<strong>weight</strong>  ⇒ <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("weight-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3Aweight">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Font weight [Integer]</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+191
+192
+193</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 191</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_weight">weight</span>
+  <span class="ivar">@weight</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="listFonts-class_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont.listFonts">permalink</a>
+  
+    .<strong>listFonts</strong>(face, weight = 0, slant = 0, setWidth = 0, encoding = 0, hints = 0)  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("listFonts-class_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont.listFonts">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>List all fonts matching hints. Returns an array of FXFontDesc objects.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#" class="toggleSource">View source</a>]</span><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+357
+358</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 357</span>
+
+<span class="kw">def</span> <span class="const">FXFont</span><span class="period">.</span><span class="id identifier rubyid_listFonts">listFonts</span><span class="lparen">(</span><span class="id identifier rubyid_face">face</span><span class="comma">,</span> <span class="id identifier rubyid_weight">weight</span><span class="op">=</span><span class="int">0</span><span class="comma">,</span> <span class="id identifier rubyid_slant">slant</span><span class="op">=</span><span class="int">0</span><span class="comma">,</span> <span class="id identifier rubyid_setWidth">setWidth</span><span class="op">=</span><span class="int">0</span><span class="comma">,</span> <span class="id identifier rubyid_encoding">encoding</span><span class="op">=</span><span class="int">0</span><span class="comma">,</span> <span class="id identifier rubyid_hints">hints</span><span class="op">=</span><span class="int">0</span><span class="rparen">)</span>
+<span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="fontMono?-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3AfontMono%3F">permalink</a>
+  
+    #<strong>fontMono?</strong>  ⇒ <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("fontMono?-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3AfontMono%3F">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Return <tt>true</tt> if font is monospaced.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><span class="showSource">[<a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#" class="toggleSource">View source</a>]</span><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+315</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 315</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_fontMono?">fontMono?</span> <span class="semicolon">;</span> <span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getCharWidth-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3AgetCharWidth">permalink</a>
+  
+    #<strong>getCharWidth</strong>(ch)  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("getCharWidth-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3AgetCharWidth">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Calculate width of single wide character <em>ch</em> in this font</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#" class="toggleSource">View source</a>]</span><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+342</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 342</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_getCharWidth">getCharWidth</span><span class="lparen">(</span><span class="id identifier rubyid_ch">ch</span><span class="rparen">)</span><span class="semicolon">;</span> <span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getFont-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3AgetFont">permalink</a>
+  
+    #<strong>getFont</strong>  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("getFont-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3AgetFont">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Return the font description as a string suitable for parsing with
+<span class="object_link"><a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#setFont-instance_method" title="Fox::FXFont#setFont (method)">#setFont</a></span>, see above.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#" class="toggleSource">View source</a>]</span><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+310</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 310</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_getFont">getFont</span><span class="lparen">(</span><span class="rparen">)</span><span class="semicolon">;</span> <span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getTextHeight-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3AgetTextHeight">permalink</a>
+  
+    #<strong>getTextHeight</strong>(text)  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("getTextHeight-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3AgetTextHeight">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the height of given <em>text</em> in this font.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#" class="toggleSource">View source</a>]</span><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+352</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 352</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_getTextHeight">getTextHeight</span><span class="lparen">(</span><span class="id identifier rubyid_text">text</span><span class="rparen">)</span> <span class="semicolon">;</span> <span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getTextWidth-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3AgetTextWidth">permalink</a>
+  
+    #<strong>getTextWidth</strong>(text)  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("getTextWidth-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3AgetTextWidth">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the width of given <em>text</em> in this font.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#" class="toggleSource">View source</a>]</span><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+347</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 347</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_getTextWidth">getTextWidth</span><span class="lparen">(</span><span class="id identifier rubyid_text">text</span><span class="rparen">)</span> <span class="semicolon">;</span> <span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="hasChar?-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3AhasChar%3F">permalink</a>
+  
+    #<strong>hasChar?</strong>(ch)  ⇒ <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("hasChar?-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3AhasChar%3F">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Return <tt>true</tt> if font has glyph for <em>ch</em>. Here, <em>ch</em>
+can either be an ordinal value, e.g.</p>
+
+<pre class="code ruby"><code class="ruby"><span class="id identifier rubyid_aFont">aFont</span><span class="period">.</span><span class="id identifier rubyid_hasChar?">hasChar?</span><span class="lparen">(</span><span class="CHAR">?a</span><span class="rparen">)</span></code></pre>
+
+<p>or a string of length one (i.e. a single character), e.g.</p>
+
+<pre class="code ruby"><code class="ruby"><span class="id identifier rubyid_aFont">aFont</span><span class="period">.</span><span class="id identifier rubyid_hasChar?">hasChar?</span><span class="lparen">(</span><span class="tstring"><span class="tstring_beg">'</span><span class="tstring_content">a</span><span class="tstring_end">'</span></span><span class="rparen">)</span></code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class="type">(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><span class="showSource">[<a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#" class="toggleSource">View source</a>]</span><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+327</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 327</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_hasChar?">hasChar?</span><span class="lparen">(</span><span class="id identifier rubyid_ch">ch</span><span class="rparen">)</span> <span class="semicolon">;</span> <span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="leftBearing-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3AleftBearing">permalink</a>
+  
+    #<strong>leftBearing</strong>(ch)  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("leftBearing-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3AleftBearing">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the left-side bearing (the distance from the origin to the leftmost
+pixel in the character) for <em>ch</em>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#" class="toggleSource">View source</a>]</span><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+332</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 332</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_leftBearing">leftBearing</span><span class="lparen">(</span><span class="id identifier rubyid_ch">ch</span><span class="rparen">)</span> <span class="semicolon">;</span> <span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rightBearing-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3ArightBearing">permalink</a>
+  
+    #<strong>rightBearing</strong>(ch)  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("rightBearing-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3ArightBearing">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the right-side bearing (the distance from the origin to the
+rightmost pixel in the character) for <em>ch</em>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#" class="toggleSource">View source</a>]</span><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+337</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 337</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_rightBearing">rightBearing</span><span class="lparen">(</span><span class="id identifier rubyid_ch">ch</span><span class="rparen">)</span> <span class="semicolon">;</span> <span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="setFont-instance_method"><a class="permalink" href="http://www.rubydoc.info/gems/fxruby/Fox%2FFXFont%3AsetFont">permalink</a>
+  
+    #<strong>setFont</strong>(string)  ⇒ <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><script>
+$(document.getElementById("setFont-instance_method")).prepend(
+  '<a class="permalink" href="/gems/fxruby/Fox%2FFXFont%3AsetFont">permalink</a>');
+</script>
+<div class="docstring">
+  <div class="discussion">
+    
+<p>Change the font to the specified font description string. Returns
+<tt>true</tt> on success.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><span class="showSource">[<a href="http://www.rubydoc.info/gems/fxruby/Fox/FXFont#" class="toggleSource">View source</a>]</span><table class="source_code">
+  <tbody><tr>
+    <td>
+      <pre class="lines">
+
+304</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'rdoc-sources/FXFont.rb', line 304</span>
+
+<span class="kw">def</span> <span class="id identifier rubyid_setFont">setFont</span><span class="lparen">(</span><span class="id identifier rubyid_string">string</span><span class="rparen">)</span><span class="semicolon">;</span> <span class="kw">end</span></pre>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Sep 11 21:34:12 2015 by
+  <a href="http://yardoc.org/" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 (ruby-2.1.4).
+</div>
+
+
+  <script src="./FXFont_files/js" type="text/javascript"></script>
+  <script type="text/javascript">clicky.init(246206);</script>
+  <noscript>&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="http://static.getclicky.com/246206ns.gif" /&gt;&lt;/p&gt;</noscript>
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-7172246-5', 'auto');
+  ga('send', 'pageview');
+  </script>
+
+
+    </div>
+  
+</body></html>

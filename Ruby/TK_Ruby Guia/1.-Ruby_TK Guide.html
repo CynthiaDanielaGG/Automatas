@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://www.tutorialspoint.com/ruby/ruby_tk_guide.htm -->
+<html class=" js no-touch csstransforms3d csstransitions"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Basic -->
+<meta charset="utf-8">
+<title>Ruby/TK Guide</title>
+<meta name="description" content="Ruby/TK Guide - Learning Ruby in simple and easy steps - A beginner&#39;s tutorial containing complete knowledge of Ruby Syntax Syntax, Classes, , Variables, Comments, Loops, File, I/O, Functions, Objects, TK, Ranges, iterators, arrays, strings, methods, blocks, Exception, Multi-Threading, Hashes, Modules, LDAP, Web Services, Web Programming.">
+<meta name="Keywords" content="Ruby, Tutorials, Learning, Beginners, Basics, Scripting Language, Syntax, Classes, , Variables, Comments, Loops, File, I/O, Functions, Objects, TK, Ranges, iterators, arrays, strings, methods, blocks, Exception, Multi-Threading, Hashes, Modules, LDAP, Web Services, Web Programming.">
+<!--<base href="http://www.tutorialspoint.com/">--><base href=".">
+<link rel="shortcut icon" href="http://www.tutorialspoint.com/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<meta name="author" content="tutorialspoint.com">
+<meta property="fb:app_id" content="471319149685276">
+<script type="text/javascript" src="./1.-Ruby_TK Guide_files/script-min-v4.js"></script>
+<link rel="stylesheet" href="http://www.tutorialspoint.com/theme/css/style-min-v5.css">
+<!-- Head Libs -->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]-->
+<!-- Front Page related changes -->
+<style>
+pre.prettyprint.tryit {background: #eee url(/ruby/images/try-it.jpg) top right no-repeat !important}
+div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #891204 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #891204 !important;}
+.submenu-item{ border-bottom: 2px solid #891204 !important; border-top: 2px solid #891204 !important }
+</style>
+<script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script>
+</head>
+<body onload="prettyPrint()" class="" style="padding-top: 0px;">
+<div class="wrapLoader">
+   <div class="imgLoader">
+      <img src="./1.-Ruby_TK Guide_files/loading-cg.gif" alt="" width="70" height="70">
+   </div>
+</div>
+<header>
+   <div class="container">			
+      <h1 class="logo">
+      <a href="http://www.tutorialspoint.com/index.htm" title="tutorialspoint">
+      <img alt="tutorialspoint" src="./1.-Ruby_TK Guide_files/logo.png" style="height: auto; width: auto; display: inline-block; top: 0px;">
+      </a>
+      </h1>			
+      <div class="search" id="searchBar">
+         <form method="get" class="searchform" name="searchform" action="http://www.google.com/search" target="_blank">
+            <input type="hidden" name="sitesearch" value="www.tutorialspoint.com">
+            <div class="input-group">
+               <input type="text" class="form-control search" name="q" autocomplete="off" placeholder="Search your tutorials..." onfocus="if (this.value == &#39;Search your tutorials...&#39;) {this.value = &#39;&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;Search your tutorials...&#39;;}">
+               <input value="FORID:11" name="cof" type="hidden">
+               <input type="hidden" name="ie" value="ISO-8859-1">
+               <span class="input-group-btn"> <button class="btn btn-default" type="submit" onclick="javascript:void(0);"><i class="icon icon-search"></i></button> </span>
+            </div>
+         </form>
+      </div>
+      <nav>
+         <ul class="nav nav-pills nav-top">
+            <li class="top-icons" style="display:none;"> <a href="http://www.tutorialspoint.com/questions_and_answers.htm"><i class="fa fa-question"></i> &nbsp;Quizzes</a> </li>
+            <li> <a href="http://www.tutorialspoint.com/shared-tutorials.php"><i class="icon icon-user"></i> &nbsp;Shared</a> </li>
+            <li> <a href="http://www.tutorialspoint.com/articles/index.php"><i class="icon icon-file-text-o"></i> &nbsp;Articles</a> </li>
+            <li class="top-icons" style="display:none;"> <a href="http://www.tutorialspoint.com/job_search.php?search_string=jobs"><i class="fa fa-send"></i> &nbsp;Jobs</a> </li>
+
+            <li class="top-icons" style="display:none;">
+              <ul class="social-icons">
+              <li class="facebook"><a href="https://www.facebook.com/tutorialspointindia" target="_blank" data-placement="bottom" title="tutorialspoint @ Facebook">Facebook</a></li>
+              <li class="googleplus"><a href="https://plus.google.com/u/0/116678774017490391259/posts" target="_blank" data-placement="bottom" title="tutorialspoint @ Google+">Google+</a></li>
+              <li class="twitter"><a href="http://www.twitter.com/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Twitter">Twitter</a></li>
+              <li class="linkedin"><a href="http://www.linkedin.com/company/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Linkedin">Linkedin</a></li>
+              <li class="rss"><a href="http://feeds.feedburner.com/SharedTutorials" target="_blank" data-placement="bottom" title="tutorialspoint RSS">RSS</a></li>
+              </ul>
+           </li>
+         </ul>
+      </nav>
+         <!-- search code here  --> 
+      <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull" style="top: 24px!important"> <i class="icon icon-bars"></i> </button>
+   </div>
+   <div class="navbar nav-main">
+      <div class="container">
+         <nav class="nav-main mega-menu">
+            <ul class="nav nav-pills nav-main" id="mainMenu">
+               <li class="dropdown no-sub-menu"> <a class="dropdown" href="http://www.tutorialspoint.com/index.htm"><i class="icon icon-home"></i> Home</a> </li>   
+               <li class="dropdown" id="liTL"><a class="dropdown tut-lib" href="javascript:void(0);"> Tutorials Library  <i class="fa-caret-down"></i> </a></li>
+               <li class="dropdown" id="liCG"><a class="dropdown" href="javascript:void(0);"><i class="fa-code"></i> Coding Ground <i class="fa-caret-down"></i> </a> </li>
+               <li class="dropdown no-sub-menu"><a class="dropdown tut-plus" href="http://www.tutorialspoint.com/absoluteclasses/upcomingclasses.htm">Absolute Classes</a>
+               </li>
+            </ul>
+         </nav>
+         <div class="submenu-item sub-main-menu" id="top-sub-menu"></div>
+      </div>
+   </div>	
+</header>
+<div style="clear:both;"></div>
+<div role="main" class="main">
+<div class="container">
+<div class="row">
+<div class="col-md-2">
+<aside class="sidebar">
+<div class="mini-logo">
+<img src="./1.-Ruby_TK Guide_files/ruby-mini-logo.jpg" alt="Ruby Tutorial">
+</div>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Ruby Basics</li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/index.htm">Ruby - Home</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_overview.htm">Ruby - Overview</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_environment.htm">Ruby - Environment</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_syntax.htm">Ruby - Syntax</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_classes.htm">Ruby - Classes</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_variables.htm">Ruby - Variables</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_operators.htm">Ruby - Operators</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_comments.htm">Ruby - Comments</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_if_else.htm">Ruby - IF...ELSE</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_loops.htm">Ruby - Loops</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_methods.htm">Ruby - Methods</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_blocks.htm">Ruby - Blocks</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_modules.htm">Ruby - Modules</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_strings.htm">Ruby - Strings</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_arrays.htm">Ruby - Arrays</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_hashes.htm">Ruby - Hashes</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_date_time.htm">Ruby - Date &amp; Time</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_ranges.htm">Ruby - Ranges</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_iterators.htm">Ruby - Iterators</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_input_output.htm">Ruby - File I/O</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_exceptions.htm">Ruby - Exceptions</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Ruby Advanced</li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_object_oriented.htm">Ruby - Object Oriented</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_regular_expressions.htm">Ruby - Regular Expressions</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_database_access.htm">Ruby - Database Access</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_web_applications.htm">Ruby - Web Applications</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_sending_email.htm">Ruby - Sending Email</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_socket_programming.htm">Ruby - Socket Programming</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_xml_xslt.htm">Ruby - Ruby/XML, XSLT</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_web_services.htm">Ruby - Web Services</a></li>
+<li><a class="left" target="_top" href="./1.-Ruby_TK Guide_files/1.-Ruby_TK Guide.html" style="background-color: rgb(214, 214, 214);">Ruby - Tk Guide</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_ldap.htm">Ruby - Ruby/LDAP Tutorial</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_multithreading.htm">Ruby - Multithreading</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Ruby Useful Resources</li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_quick_guide.htm">Ruby - Quick Guide</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_builtin_functions.htm">Ruby - Built-in Functions</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_predefined_variables.htm">Ruby - Predefined Variables</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_predefined_constants.htm">Ruby - Predefined Constants</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_associated_tools.htm">Ruby - Associated Tools</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_resources.htm">Ruby - Useful Resources</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_discussion.htm">Ruby - Discussion</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby-on-rails/index.htm">Ruby - Ruby on Rails Tutorial</a></li>
+</ul>
+<ul class="nav nav-list primary push-bottom left-menu special">
+<li class="sreading">Selected Reading</li>
+<li><a target="_top" href="http://www.tutorialspoint.com/developers_best_practices/index.htm">Developer's Best Practices</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/questions_and_answers.htm">Questions and Answers</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/effective_resume_writing.htm">Effective Resume Writing</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/hr_interview_questions/index.htm">HR Interview Questions</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/computer_glossary.htm">Computer Glossary</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/computer_whoiswho.htm">Who is Who</a></li>
+</ul>
+</aside>
+</div>
+<!-- PRINTING STARTS HERE -->
+<div class="row">
+<div class="content">
+<div class="col-md-7 middle-col">
+<h1>Ruby/Tk Guide</h1>
+<div class="topgooglead">
+<hr>
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script>
+</div>
+<hr>
+<div class="pre-btn">
+<a href="http://www.tutorialspoint.com/ruby/ruby_web_services.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="http://www.tutorialspoint.com/ruby/ruby_ldap.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
+</div>
+<div class="clearer"></div>
+<hr>
+<h2>Introduction:</h2>
+<p>The standard graphical user interface (GUI) for Ruby is Tk. Tk started out as the GUI for the Tcl scripting language developed by John Ousterhout.</p>
+<p>Tk has the unique distinction of being the only cross-platform GUI. Tk runs on Windows, Mac, and Linux and provides a native look-and-feel on each operating system.</p>
+<p>The basic component of a Tk-based application is called a widget. A component is also sometimes called a window, since, in Tk, "window" and "widget" are often used interchangeably.</p>
+<p>Tk applications follow a widget hierarchy where any number of widgets may be placed within another widget, and those widgets within another widget, ad infinitum. The main widget in a Tk program is referred to as the root widget and can be created by making a new instance of the TkRoot class.</p>
+<ul class="list">
+<li><p>Most Tk-based applications follow the same cycle: create the widgets, place them in the interface, and finally, bind the events associated with each widget to a method.</p></li>
+<li><p>There are three geometry managers; <i>place, grid</i> and <i>pack</i> that are responsible for controlling the size and location of each of the widgets in the interface. </p></li>
+</ul>
+<h2>Installation:</h2>
+<p>The Ruby Tk bindings are distributed with Ruby but Tk is a separate installation. Windows users can download a single click Tk installation from <a href="http://aspn.activestate.com/ASPN/Downloads/ActiveTcl/" target="_blank">ActiveState's ActiveTcl</a>.</p>
+<p>Mac and Linux users may not need to install it because there is a great chance that its already installed along with OS but if not, you can download prebuilt packages or get the source from the <a href="http://www.tcl.tk/software/tcltk/downloadnow84.tml" target="_blank">Tcl Developer Xchange</a>.</p>
+<h2>Simple Tk Application:</h2>
+<p>A typical structure for Ruby/Tk programs is to create the main or <b>root</b> window (an instance of TkRoot), add widgets to it to build up the user interface, and then start the main event loop by calling <b> Tk.mainloop</b>.</p>
+<p>The traditional <i>Hello, World!</i> example for Ruby/Tk looks something like this:</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="kwd">require</span><span class="pln"> </span><span class="str">'tk'</span><span class="pln">
+
+root </span><span class="pun">=</span><span class="pln"> </span><span class="typ">TkRoot</span><span class="pun">.</span><span class="kwd">new</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> title </span><span class="str">"Hello, World!"</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+</span><span class="typ">TkLabel</span><span class="pun">.</span><span class="kwd">new</span><span class="pun">(</span><span class="pln">root</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">do</span><span class="pln">
+   text </span><span class="str">'Hello, World!'</span><span class="pln">
+   pack </span><span class="pun">{</span><span class="pln"> padx </span><span class="lit">15</span><span class="pln"> </span><span class="pun">;</span><span class="pln"> pady </span><span class="lit">15</span><span class="pun">;</span><span class="pln"> side </span><span class="str">'left'</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="typ">Tk</span><span class="pun">.</span><span class="pln">mainloop</span></pre>
+<p>Here, after loading the tk extension module, we create a root-level frame using <i>TkRoot.new</i>. We then make a <i>TkLabel</i> widget as a child of the root frame, setting several options for the label. Finally, we pack the root frame and enter the main GUI event loop.</p> 
+<p>If you would run this script, it would produce the following result:</p>
+<img src="./1.-Ruby_TK Guide_files/ruby-tk1.jpg" alt="Ruby/Tk Hello World">
+<h2>Ruby/Tk Widget Classes:</h2>
+<p>There is a list of various Ruby/Tk classes, which can be used to create a desired GUI using Ruby/Tk.</p>
+<ul class="list">
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_frame.htm">TkFrame</a> Create and manipulate frame widgets</p></li>
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_button.htm">TkButton</a> Create and manipulate button widgets</p></li>
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_label.htm">TkLabel</a> Create and manipulate label widgets</p></li>
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_entry.htm">TkEntry</a> Create and manipulate entry widgets</p></li>
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_checkbutton.htm">TkCheckButton</a> Create and manipulate checkbutton widgets</p></li>
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_radiobutton.htm"> TkRadioButton</a> Create and manipulate radiobutton widgets</p></li>
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_listbox.htm">TkListbox</a> Create and manipulate listbox widgets</p></li>
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_combobox.htm">TkComboBox</a> Create and manipulate listbox widgets</p></li>
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_menu.htm">TkMenu</a> Create and manipulate menu widgets</p></li>
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_menubutton.htm">TkMenubutton</a> Create and manipulate menubutton widgets</p></li>
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_messagebox.htm">Tk.messageBox</a> Create and manipulate a message dialog</p></li>
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_scrollbar.htm"> TkScrollbar</a> Create and manipulate scrollbar widgets</p></li>
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_canvas.htm">TkCanvas</a> Create and manipulate canvas widgets</p></li>
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_scale.htm"> TkScale</a> Create and manipulate scale widgets</p></li>
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_text.htm"> TkText</a> Create and manipulate text widgets</p></li>
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_toplevel.htm"> TkToplevel</a> Create and manipulate toplevel widgets</p></li>
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_spinbox.htm"> TkSpinbox</a> Create and manipulate Spinbox widgets</p></li>
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_progressbar.htm">TkProgressBar</a> Create and manipulate Progress Bar widgets</p></li>
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_dialogbox.htm">Dialog Box</a> Create and manipulate Dialog Box widgets</p></li>
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_notebook.htm"> Tk::Tile::Notebook</a> Display several windows in limited space with notebook metaphor.</p></li>
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_paned.htm"> Tk::Tile::Paned</a> Displays a number of subwindows, stacked either vertically or horizontally.</p></li>
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_separator.htm"> Tk::Tile::Separator</a> Displays a horizontal or vertical separator bar.</p></li>
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_fonts_colors_images.htm">Ruby/Tk Font, Colors and Images</a> Understanding Ruby/Tk Fonts, Colors and Images</p></li>
+</ul>
+<h2>Standard Configuration Options:</h2>
+<p>All widgets have a number of different configuration options, which generally control how they are displayed or how they behave. The options that are available depend upon the widget class of course.</p>
+<p>Here is a list of all the standard configuration options which could be applicable to any Ruby/Tk widget. There are other widget specific options also which would be explained along with widgets.</p>
+<table class="table table-bordered">
+<tbody><tr>
+<th style="width:5%">SN</th>
+<th>Options with Description</th>
+</tr>
+<tr>
+<td>1</td>
+<td><b>activebackground</b> =&gt; String <p>Specifies background color to use when drawing active elements. An element is active if the mouse cursor is positioned over the element and pressing a mouse button will cause some action to occur. You can use color names like "red", "blue", "pink", "yellow" etc.</p></td>
+</tr>
+<tr>
+<td>2</td>
+<td><b>activeborderwidth</b> =&gt; Integer 
+<p>Specifies a non-negative value indicating the width of the 3-D border drawn around active elements.</p></td>
+</tr>
+<tr>
+<td>3</td>
+<td><b>activeforeground</b> =&gt; String 
+<p>Specifies foreground color to use when drawing active elements.</p></td>
+</tr>
+<tr>
+<td>4</td>
+<td><b>anchor</b> =&gt; String 
+<p>Specifies how the information in a widget (e.g. text or a bitmap) is to be displayed in the widget. Must be one of the values <b>n</b>, <b>ne</b>, <b>e</b>, <b>se</b>, <b>s</b>, <b>sw</b>, <b>w</b>, <b>nw</b>, or <b>center</b>. For example, <b>nw</b> means display the information such that its top-left corner is at the top-left corner of the widget.</p></td>
+</tr>
+<tr>
+<td>5</td>
+<td><b>background or bg</b> =&gt; String 
+<p>Specifies the normal background color to use when displaying the widget.</p></td>
+</tr>
+<tr>
+<td>6</td>
+<td><b>bitmap</b>  =&gt; Bitmap
+<p>Specifies a bitmap to display in the widget. The exact way in which the bitmap is displayed may be affected by other options such as anchor or justify.</p></td>
+</tr>
+<tr>
+<td>7</td>
+<td><b>borderwidth or bd</b> =&gt; Integer 
+<p>Specifies a non-negative value indicating the width of the 3-D border to draw around the outside of the widget.</p></td>
+</tr>
+<tr>
+<td>8</td>
+<td><b>compound</b> =&gt; String <p>Specifies if the widget should display text and bitmaps/images at the same time, and if so, where the bitmap/image should be placed relative to the text.  Must be one of the values <b>none</b>, <b>bottom</b>, <b>top</b>, <b>left</b>, <b>right</b>, or <b>center</b>.</p></td>
+</tr>
+<tr>
+<td>9</td>
+<td><b>cursor</b> =&gt; String 
+<p>Specifies the mouse cursor to be used for the widget. Possible values could be "watch", "arrow" etc.</p></td>
+</tr>
+<tr>
+<td>10</td>
+<td><b>disabledforeground</b>  =&gt; String 
+<p>Specifies foreground color to use when drawing a disabled element.</p></td>
+</tr>
+<tr>
+<td>11</td>
+<td><b>exportselection</b> =&gt; Boolean 
+<p>Specifies whether or not a selection in the widget should also be the X selection. The value may have any of the <b>true</b>, <b>false</b>, <b>0</b>, <b>1</b>, <b>yes</b>, or <b>no</b>. If the selection is exported, then selecting in the widget deselects the current X selection, selecting outside the widget deselects any widget selection, and the widget will respond to selection retrieval requests when it has a selection. </p></td>
+</tr>
+<tr>
+<td>12</td>
+<td><b>font</b> =&gt; String 
+<p>Specifies the font to use when drawing text inside the widget.</p></td>
+</tr>
+<tr>
+<td>13</td>
+<td><b>foreground or fg</b> =&gt; String 
+<p>Specifies the normal foreground color to use when displaying the widget.</p></td>
+</tr>
+<tr>
+<td>14</td>
+<td><b>highlightbackground</b> =&gt; String 
+<p>Specifies the color to display in the traversal highlight region when the widget does not have the input focus.</p></td>
+</tr>
+<tr>
+<td>15</td>
+<td><b>highlightcolor</b> =&gt; String 
+<p>Specifies the color to use for the traversal highlight rectangle that is drawn around the widget when it has the input focus.</p></td>
+</tr>
+<tr>
+<td>16</td>
+<td><b>highlightthickness</b> =&gt; Integer 
+<p>Specifies a non-negative value indicating the width of the highlight rectangle to draw around the outside of the widget when it has the input focus.</p></td>
+</tr>
+<tr>
+<td>17</td>
+<td><b>image</b> =&gt; Image 
+<p>Specifies an image to display in the widget, which must have been created with an image create. Typically, if the image option is specified then it overrides other options that specify a bitmap or textual value to display in the widget; the image option may be reset to an empty string to re-enable a bitmap or text display.</p></td>
+</tr>
+<tr>
+<td>18</td>
+<td><b>jump </b> =&gt; String 
+<p>For widgets with a slider that can be dragged to adjust a value, such as scrollbars and scales, this option determines when notifications are made about changes in the value. The option's value must be a boolean. If the value is false, updates are made continuously as the slider is dragged. If the value is true, updates are delayed until the mouse button is released to end the drag; at that point a single notification is made.</p></td>
+</tr>
+<tr>
+<td>19</td>
+<td><b>justify </b> =&gt; String 
+<p>When there are multiple lines of text displayed in a widget, this option determines how the lines line up with each other.  Must be one of <b>left</b>, <b>center</b>, or <b>right</b>.  <b>Left</b> means that the lines' left edges all line up, <b>center</b> means that the lines' centers are aligned, and <b>right</b> means that the lines' right edges line up.</p></td>
+</tr>
+<tr>
+<td>20</td>
+<td><b>offset </b> =&gt; String 
+<p>Specifies the offset of tiles (see also <b>tile</b> option).  It can have two different formats <b>offset x,y</b> or <b> offset side</b>, where side can be <b>n</b>, <b>ne</b>, <b>e</b>, <b>se</b>, <b>s</b>, <b>sw</b>, <b>w</b>, <b>nw</b>, or <b>center</b>.</p></td>
+</tr>
+<tr>
+<td>21</td>
+<td><b>orient </b> =&gt; String 
+<p>For widgets that can lay themselves out with either a horizontal or vertical orientation, such as scrollbars, this option specifies which orientation should be used.  Must be either <b>horizontal</b>
+or <b> vertical</b> or an abbreviation of one of these.</p></td>
+</tr>
+<tr>
+<td>22</td>
+<td><b>padx</b> =&gt; Integer 
+<p>Specifies a non-negative value indicating how much extra space to request for the widget in the X-direction.</p></td>
+</tr>
+<tr>
+<td>23</td>
+<td><b>pady</b> =&gt; Integer 
+<p>Specifies a non-negative value indicating how much extra space to request for the widget in the Y-direction.</p></td>
+</tr>
+<tr>
+<td>24</td>
+<td><b>relief</b> =&gt; Integer 
+<p>Specifies the 3-D effect desired for the widget.  Acceptable values are <b>raised</b>, <b>sunken</b>, <b>flat</b>, <b>ridge</b>, and <b>groove</b>.</p></td>
+</tr>
+<tr>
+<td>25</td>
+<td><b>repeatdelay</b> =&gt; Integer 
+<p>Specifies the number of milliseconds a button or key must be held down before it begins to auto-repeat. Used, for example, on the up- and down-arrows in scrollbars.</p></td></tr>
+<tr>
+<td>26</td>
+<td><b>repeatinterval </b>  =&gt; Integer 
+<p>Used in conjunction with <b>repeatdelay</b>:  once auto-repeat begins, this option determines the number of milliseconds between auto-repeats.</p></td>
+</tr>
+<tr>
+<td>27</td>
+<td><b>selectbackground</b> =&gt; String 
+<p>Specifies the background color to use when displaying selected items.</p></td>
+</tr>
+<tr>
+<td>28</td>
+<td><b>selectborderwidth</b> =&gt; Integer 
+<p>Specifies a non-negative value indicating the width of the 3-D border to draw around selected items.</p></td>
+</tr>
+<tr>
+<td>29</td>
+<td><b>selectforeground</b> =&gt; String 
+<p>Specifies the foreground color to use when displaying selected items.</p></td>
+</tr>
+<tr>
+<td>30</td>
+<td><b>setgrid</b> =&gt; Boolean 
+<p>Specifies a boolean value that determines whether this widget controls the resizing grid for its top-level window. This option is typically used in text widgets, where the information in the widget has a natural size (the size of a character) and it makes sense for the window's dimensions to be integral numbers of these units.</p></td>
+</tr>
+<tr>
+<td>31</td>
+<td><b>takefocus</b> =&gt; Integer 
+<p>Provides information used when moving the focus from window to window via keyboard traversal (e.g., Tab and Shift-Tab). Before setting the focus to a window, the traversal scripts first check whether the window is viewable (it and all its ancestors are mapped); if not, the window is skipped. A value of 0 means that this window should be skipped entirely during keyboard traversal. 1 means that the this window should always receive the input focus. </p></td>
+</tr>
+<tr>
+<td>32</td>
+<td><b>text</b> =&gt; String 
+<p>Specifies a string to be displayed inside the widget.  The way in which
+the string is displayed depends on the particular widget and may be determined by other options, such as <b>anchor</b> or <b> justify</b>.</p></td>
+</tr>
+<tr>
+<td>33</td>
+<td><b>textvariable</b> =&gt; Variable 
+<p>Specifies the name of a variable.  The value of the variable is a text string to be displayed inside the widget;  if the variable value changes then the widget will automatically update itself to reflect the new value. The way in which the string is displayed in the widget depends on the particular widget and may be determined by other options, such as <b>anchor</b> or <b>justify</b>.</p></td>
+</tr>
+<tr>
+<td>34</td>
+<td><b>tile</b> =&gt; Image 
+<p>Specifies image used to display the widget. If image is the empty string, then the normal background color is displayed.</p></td>
+</tr>
+<tr><td>35</td>
+<td><b>troughcolor</b> =&gt; String 
+<p>Specifies the color to use for the rectangular trough areas in widgets such as scrollbars and scales.</p></td>
+</tr>
+<tr>
+<td>36</td>
+<td><b>troughtile</b> =&gt; Image 
+<p>Specifies image used to display in the rectangular trough areas in widgets such as scrollbars and scales.</p></td>
+</tr>
+<tr>
+<td>37</td>
+<td><b>underline</b> =&gt; Integer 
+<p>Specifies the integer index of a character to underline in the widget. This option is used by the default bindings to implement keyboard traversal for menu buttons and menu entries. 0 corresponds to the first character of the text displayed in the widget, 1 to the next character, and so on.</p></td>
+</tr>
+<tr>
+<td>38</td>
+<td><b>wraplength</b> =&gt; Integer 
+<p>For widgets that can perform word-wrapping, this option specifies the maximum line length.</p></td>
+</tr>
+<tr>
+<td>39</td>
+<td><b>xscrollcommand</b> =&gt; function 
+<p>Specifies a callback used to communicate with horizontal scrollbars.</p></td>
+</tr>
+<tr>
+<td>40</td>
+<td><b>yscrollcommand</b> =&gt; function 
+<p>Specifies a callback used to communicate with vertical scrollbars.</p></td>
+</tr>
+</tbody></table>
+<h2>Ruby/Tk Geometry Management:</h2>
+<p>Geometry Management deals with positioning different widgets as per requirement. Geometry management in Tk relies on the concept of master and slave widgets.</p>
+<p>A master is a widget, typically a top-level window or a frame, which will contain other widgets, which are called slaves. You can think of a geometry manager as taking control of the master widget, and deciding what will be displayed within.</p>
+<p>The geometry manager will ask each slave widget for its natural size, or how large it would ideally like to be displayed. It then takes that information and combines it with any parameters provided by the program when it asks the geometry manager to manage that particular slave widget.</p>
+<p>There are three geometry managers <i>place, grid</i> and <i>pack</i> that are responsible for controlling the size and location of each of the widgets in the interface.</p>
+<ul class="list">
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_grid.htm">grid</a> Geometry manager that arranges widgets in a grid</p></li>
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_pack.htm">pack</a> Geometry manager that packs around edges of cavity</p></li>
+<li><p><a href="http://www.tutorialspoint.com/ruby/ruby_tk_place.htm">place</a> Geometry manager for fixed or rubber-sheet placement</p></li>
+</ul>
+<h2>Ruby/Tk Event Handling:</h2>
+<p>Ruby/Tk supports <i>event loop</i> which receives events from the operating system. These are things like button presses, keystrokes, mouse movement, window resizing, and so on.</p>
+<p>Ruby/Tk takes care of managing this event loop for you. It will figure out what widget the event applies to (did the user click on this button? if a key was pressed, which textbox had the focus?), and dispatch it accordingly. Individual widgets know how to respond to events, so for example a button might change color when the mouse moves over it, and revert back when the mouse leaves.</p>
+<p>At a higher level, Ruby/Tk invokes callbacks in your program to indicate that something significant happened to a widget For either case, you can provide a code block or a <i>Ruby Proc</i> object that specifies how the application responds to the event or callback.</p>
+<p>Let's take a look at how to use the bind method to associate basic window system events with the Ruby procedures that handle them. The simplest form of bind takes as its inputs a string indicating the event name and a code block that Tk uses to handle the event.</p>
+<p>For example, to catch the <i>ButtonRelease</i> event for the first mouse button on some widget, you'd write:</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pln">someWidget</span><span class="pun">.</span><span class="pln">bind</span><span class="pun">(</span><span class="str">'ButtonRelease-1'</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="pun">....</span><span class="pln">code block to handle </span><span class="kwd">this</span><span class="pln"> </span><span class="kwd">event</span><span class="pun">...</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p>An event name can include additional modifiers and details. A modifier is a string like <i>Shift</i>, <i>Control</i> or <i>Alt</i>, indicating that one of the modifier keys was pressed.</p>
+<p>So, for example, to catch the event that's generated when the user holds down the <i>Ctrl</i> key and clicks the right mouse button</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pln">someWidget</span><span class="pun">.</span><span class="pln">bind</span><span class="pun">(</span><span class="str">'Control-ButtonPress-3'</span><span class="pun">,</span><span class="pln"> proc </span><span class="pun">{</span><span class="pln"> puts </span><span class="str">"Ouch!"</span><span class="pln"> </span><span class="pun">})</span></pre>
+<p>Many Ruby/Tk widgets can trigger <i>callbacks</i> when the user activates them, and you can use the <i>command</i> callback
+to specify that a certain code block or procedure is invoked when that happens. As seen earlier, you can specify the command callback procedure when you create the widget:</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pln">helpButton </span><span class="pun">=</span><span class="pln"> </span><span class="typ">TkButton</span><span class="pun">.</span><span class="kwd">new</span><span class="pun">(</span><span class="pln">buttonFrame</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   text </span><span class="str">"Help"</span><span class="pln">
+   command proc </span><span class="pun">{</span><span class="pln"> showHelp </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p>or you can assign it later, using the widget's <i>command</i> method:</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pln">helpButton</span><span class="pun">.</span><span class="pln">command proc </span><span class="pun">{</span><span class="pln"> showHelp </span><span class="pun">}</span></pre>
+<p>Since the command method accepts either procedures or code blocks, you could also write the previous code example as:</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pln">helpButton </span><span class="pun">=</span><span class="pln"> </span><span class="typ">TkButton</span><span class="pun">.</span><span class="kwd">new</span><span class="pun">(</span><span class="pln">buttonFrame</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   text </span><span class="str">"Help"</span><span class="pln">
+   command </span><span class="pun">{</span><span class="pln"> showHelp </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p>There are following basic event types, which you can use in your Ruby/Tk application:</p>
+<table class="table table-bordered">
+<tbody><tr><th>Tag</th><th>Event Description</th></tr>
+<tr><td>"1" (one)</td><td>Clicked left mouse button<p></p></td></tr>
+<tr><td>"ButtonPress-1"</td><td>Clicked left mouse button<p></p></td></tr>
+<tr><td>"Enter"</td><td>Moved mouse inside</td></tr>
+<tr><td>"Leave"</td><td>Moved mouse outside</td></tr>
+<tr><td>"Double-1"</td><td>Double clicked</td></tr>
+<tr><td>"B3-Motion"</td><td>Right button drag from one position to another</td></tr>
+<tr><td>Control-ButtonPress-3</td><td>Right button is pressed along with <i>Ctrl</i> Key.</td></tr>
+<tr><td>Alt-ButtonPress-1</td><td>Let button is pressed along with <i>Alt</i> Key.</td></tr>
+</tbody></table>
+<h2>The <i>configure</i> Method</h2>
+<p>The <i>configure</i> method can be used to set and retrieve any widget configuration values. For example, to change the width of a button you can call configure method any time as follows:</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="kwd">require</span><span class="pln"> </span><span class="str">"tk"</span><span class="pln">
+
+button </span><span class="pun">=</span><span class="pln"> </span><span class="typ">TkButton</span><span class="pun">.</span><span class="kwd">new</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  text </span><span class="str">'Hello World!'</span><span class="pln">
+  pack
+</span><span class="pun">}</span><span class="pln">
+button</span><span class="pun">.</span><span class="pln">configure</span><span class="pun">(</span><span class="str">'activebackground'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'blue'</span><span class="pun">)</span><span class="pln">
+</span><span class="typ">Tk</span><span class="pun">.</span><span class="pln">mainloop</span></pre>
+<p>To get the value for a current widget, just supply it without a value as follows:</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pln">color </span><span class="pun">=</span><span class="pln"> button</span><span class="pun">.</span><span class="pln">configure</span><span class="pun">(</span><span class="str">'activebackground'</span><span class="pun">)</span></pre>
+<p>You can also call configure without any options at all, which will give you a listing of all options and their values. </p>
+<h2>The <i>cget</i> Method:</h2>
+<p>For simply retrieving the value of an option, configure returns more information than you generally want. The cget method returns just the current value.</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="pln">color </span><span class="pun">=</span><span class="pln"> button</span><span class="pun">.</span><span class="pln">cget</span><span class="pun">(</span><span class="str">'activebackground'</span><span class="pun">)</span></pre>
+<hr>
+<div class="pre-btn">
+<a href="http://www.tutorialspoint.com/ruby/ruby_web_services.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
+</div>
+<div class="print-btn center">
+<a href="http://www.tutorialspoint.com/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a>
+</div>
+<div class="nxt-btn">
+<a href="http://www.tutorialspoint.com/ruby/ruby_ldap.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
+</div>
+<hr>
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead">
+<div class="bottomadtag">Advertisements</div>
+<script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3" id="rightbar">
+<div class="simple-ad">
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;http://www.facebook.com/sharer.php?u=&#39; + &#39;http://www.tutorialspoint.com/ruby/ruby_tk_guide.htm&#39;,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./1.-Ruby_TK Guide_files/facebookIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;http://twitter.com/share?url=&#39; + &#39;http://www.tutorialspoint.com/ruby/ruby_tk_guide.htm&#39;,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./1.-Ruby_TK Guide_files/twitterIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;https://www.linkedin.com/cws/share?url=&#39; + &#39;http://www.tutorialspoint.com/ruby/ruby_tk_guide.htm&amp;title=&#39;+ document.title,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./1.-Ruby_TK Guide_files/linkedinIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;https://plus.google.com/share?url=http://www.tutorialspoint.com/ruby/ruby_tk_guide.htm&#39;,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./1.-Ruby_TK Guide_files/googlePlusIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/ruby/ruby_tk_guide.htm&amp;title=&#39;+ document.title,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./1.-Ruby_TK Guide_files/StumbleUponIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;http://reddit.com/submit?url=http://www.tutorialspoint.com/ruby/ruby_tk_guide.htm&amp;title=&#39;+ document.title,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=656,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./1.-Ruby_TK Guide_files/reddit.jpg" alt="img">
+</a>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="footer-copyright">
+<div class="container">
+<div class="row">
+<div class="col-md-1">
+<a href="http://www.tutorialspoint.com/index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="./1.-Ruby_TK Guide_files/logo-footer.png"> </a>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+   <nav id="sub-menu">
+      <ul>
+         <li><a href="http://www.tutorialspoint.com/about/tutorials_writing.htm">Write for us</a></li>
+         <li><a href="http://www.tutorialspoint.com/about/faq.htm">FAQ's</a></li>
+         <li><a href="http://www.tutorialspoint.com/about/about_helping.htm">Helping</a></li>
+         <li><a href="http://www.tutorialspoint.com/about/contact_us.htm">Contact</a></li>
+      </ul>
+   </nav>
+</div>
+<div class="col-md-3 col-sm-12 col-xs-12">
+<p>© Copyright 2015. All Rights Reserved.</p>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+   <div class="news-group">
+      <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == &#39;Enter email for newsletter...&#39;) {this.value = &#39;&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;Enter email for newsletter...&#39;;}">
+      <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span>
+      <div id="newsresponse"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Libs -->
+<script type="text/javascript" src="./1.-Ruby_TK Guide_files/custom-min.js"></script><a class="scroll-to-top" href="http://www.tutorialspoint.com/#" id="scrollToTop"><i class="icon icon-chevron-up icon-white"></i></a>
+<script src="./1.-Ruby_TK Guide_files/urchin.js">
+</script>
+<script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>
+<script type="text/javascript" src="./1.-Ruby_TK Guide_files/jquery.colorbox-min.js"></script>
+<script type="text/javascript">
+   var tryit = new $.TryIt('/ruby/try_ruby.php');
+   tryit.compile();
+</script><div id="source" style="display:none;"></div><div id="supportsource" style="display:none;"></div><div id="utilsource" style="display:none;"></div><div id="extrasource" style="display:none;"></div><div id="inputs" style="display:none;"></div><div id="filename" style="display:none;"></div>
+
+
+<div class="autocomplete-suggestions " style="top: 57px; left: 867.5px; width: 407px;"></div><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div></body></html>

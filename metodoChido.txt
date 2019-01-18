@@ -1,0 +1,105 @@
+Examen1:
+Encontrar distancias alejadas entre si
+
+resultado= valor1.values
+  result = resultado.sort
+  valorFinal= result.last
+
+  llaves=valor1.keys
+
+  llaves.each do |i|
+conv=i.to_s
+    case i
+      when "barcelona"
+        obtenerValor=valor1['barcelona']
+        if obtenerValor == valorFinal
+
+          puts "la ciudad mas alejada de "+ poblacion1+ " es: "+ i
+          puts "con una distancia de: " + valor1[i].to_s + "km"
+
+        end
+      when "gerona"
+        obtenerValor=valor1['gerona']
+        if obtenerValor == valorFinal
+          puts "la ciudad mas alejada de "+ poblacion1+ " es: "+ i
+          puts "con una distancia de: " + valor1[i].to_s + "km"
+        end
+      when "lerida"
+        obtenerValor=valor1['lerida']
+        if obtenerValor == valorFinal
+          puts "la ciudad mas alejada de "+ poblacion1+ " es: "+ i
+          puts "con una distancia de: " + valor1[i].to_s + "km"
+        end
+      when "tarragonal"
+        obtenerValor=valor1['tarragonal']
+        if obtenerValor == valorFinal
+          puts "la ciudad mas alejada de "+ poblacion1+ " es: "+ i
+          puts "con una distancia de: " + valor1[i].to_s + "km"
+        end
+      when "zaragoza"
+        obtenerValor=valor1['zaragoza']
+        if obtenerValor == valorFinal
+          puts "la ciudad mas alejada de "+ poblacion1+ " es: "+ i
+          puts "con una distancia de: " + valor1[i].to_s + "km"
+        end
+      when "teruel"
+        obtenerValor=valor1['teruel']
+        if obtenerValor == valorFinal
+          puts "la ciudad mas alejada de "+ poblacion1+ " es: "+ i
+          puts "con una distancia de: " + valor1[i].to_s + "km"
+        end
+    end
+  end
+
+  valor3=poblaciones[poblacion2]
+#Operacion
+  resultado= valor3.values
+  result = resultado.sort
+  valorFinal= result.last
+
+
+  llaves=valor1.keys
+
+  llaves.each do |i|
+
+
+    case i
+      when "barcelona"
+        obtenerValor=valor3['barcelona']
+        if obtenerValor == valorFinal
+          puts "la ciudad mas alejada de "+ poblacion2+ "es: "+ i
+          puts "con una distancia de: " + valor3[i].to_s + "km"
+
+        end
+      when "gerona"
+        obtenerValor=valor3['gerona']
+        if obtenerValor == valorFinal
+          puts "la ciudad mas alejada de "+ poblacion2+ "es: "+ i
+          puts "con una distancia de: " + valor3[i].to_s + "km"
+        end
+      when "lerida"
+        obtenerValor=valor3['lerida']
+        if obtenerValor == valorFinal
+          puts "la ciudad mas alejada de "+ poblacion2+ "es: "+ i
+          puts "con una distancia de: " + valor3[i].to_s + "km"
+        end
+      when "tarragonal"
+        obtenerValor=valor3['tarragonal']
+        if obtenerValor == valorFinal
+          puts "la ciudad mas alejada de "+ poblacion2+ "es: "+ i
+          puts "con una distancia de: " + valor3[i].to_s + "km"
+        end
+      when "zaragoza"
+        obtenerValor=valor3['zaragoza']
+        if obtenerValor == valorFinal
+          puts "la ciudad mas alejada de "+ poblacion2+ "es: "+ i
+          puts "con una distancia de: " + valor3[i].to_s + "km"
+        end
+      when "teruel"
+        obtenerValor=valor3['teruel']
+        if obtenerValor == valorFinal
+          puts "la ciudad mas alejada de "+ poblacion2+ "es: "+ i
+          puts "con una distancia de: " + valor3[i].to_s + "km"
+        end
+    end
+  end

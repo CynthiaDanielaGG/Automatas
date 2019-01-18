@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://www.tutorialspoint.com/ruby/ruby_tk_checkbutton.htm -->
+<html class=" js no-touch csstransforms3d csstransitions"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Basic -->
+<meta charset="utf-8">
+<title>Ruby/TK - Checkbutton Widget </title>
+<meta name="description" content="Ruby/TK - Checkbutton Widget - Learning Ruby in simple and easy steps - A beginner&#39;s tutorial containing complete knowledge of Ruby Syntax Syntax, Classes, , Variables, Comments, Loops, File, I/O, Functions, Objects, TK, Ranges, iterators, arrays, strings, methods, blocks, Exception, Multi-Threading, Hashes, Modules, LDAP, Web Services, Web Programming.">
+<meta name="Keywords" content="Ruby, Tutorials, Learning, Beginners, Basics, Scripting Language, Syntax, Classes, , Variables, Comments, Loops, File, I/O, Functions, Objects, TK, Ranges, iterators, arrays, strings, methods, blocks, Exception, Multi-Threading, Hashes, Modules, LDAP, Web Services, Web Programming.">
+<!--<base href="http://www.tutorialspoint.com/">--><base href=".">
+<link rel="shortcut icon" href="http://www.tutorialspoint.com/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<meta name="author" content="tutorialspoint.com">
+<meta property="fb:app_id" content="471319149685276">
+<script type="text/javascript" src="./6.-Ruby_TK - Checkbutton Widget_files/script-min-v4.js"></script>
+<link rel="stylesheet" href="http://www.tutorialspoint.com/theme/css/style-min-v5.css">
+<!-- Head Libs -->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]-->
+<!-- Front Page related changes -->
+<style>
+pre.prettyprint.tryit {background: #eee url(/ruby/images/try-it.jpg) top right no-repeat !important}
+div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #891204 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #891204 !important;}
+.submenu-item{ border-bottom: 2px solid #891204 !important; border-top: 2px solid #891204 !important }
+</style>
+<script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script>
+</head>
+<body onload="prettyPrint()" class="sticky-menu-active" style="padding-top: 111px;">
+<div class="wrapLoader">
+   <div class="imgLoader">
+      <img src="./6.-Ruby_TK - Checkbutton Widget_files/loading-cg.gif" alt="" width="70" height="70">
+   </div>
+</div>
+<header>
+   <div class="container">			
+      <h1 class="logo logo-sticky-active">
+      <a href="http://www.tutorialspoint.com/index.htm" title="tutorialspoint">
+      <img alt="tutorialspoint" src="./6.-Ruby_TK - Checkbutton Widget_files/logo.png" style="height: 40px; width: 137px; display: inline-block; top: 28px;">
+      </a>
+      </h1>			
+      <div class="search" id="searchBar">
+         <form method="get" class="searchform" name="searchform" action="http://www.google.com/search" target="_blank">
+            <input type="hidden" name="sitesearch" value="www.tutorialspoint.com">
+            <div class="input-group">
+               <input type="text" class="form-control search" name="q" autocomplete="off" placeholder="Search your tutorials..." onfocus="if (this.value == &#39;Search your tutorials...&#39;) {this.value = &#39;&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;Search your tutorials...&#39;;}">
+               <input value="FORID:11" name="cof" type="hidden">
+               <input type="hidden" name="ie" value="ISO-8859-1">
+               <span class="input-group-btn"> <button class="btn btn-default" type="submit" onclick="javascript:void(0);"><i class="icon icon-search"></i></button> </span>
+            </div>
+         </form>
+      </div>
+      <nav>
+         <ul class="nav nav-pills nav-top">
+            <li class="top-icons" style="display:none;"> <a href="http://www.tutorialspoint.com/questions_and_answers.htm"><i class="fa fa-question"></i> &nbsp;Quizzes</a> </li>
+            <li> <a href="http://www.tutorialspoint.com/shared-tutorials.php"><i class="icon icon-user"></i> &nbsp;Shared</a> </li>
+            <li> <a href="http://www.tutorialspoint.com/articles/index.php"><i class="icon icon-file-text-o"></i> &nbsp;Articles</a> </li>
+            <li class="top-icons" style="display:none;"> <a href="http://www.tutorialspoint.com/job_search.php?search_string=jobs"><i class="fa fa-send"></i> &nbsp;Jobs</a> </li>
+
+            <li class="top-icons" style="display:none;">
+              <ul class="social-icons">
+              <li class="facebook"><a href="https://www.facebook.com/tutorialspointindia" target="_blank" data-placement="bottom" title="tutorialspoint @ Facebook">Facebook</a></li>
+              <li class="googleplus"><a href="https://plus.google.com/u/0/116678774017490391259/posts" target="_blank" data-placement="bottom" title="tutorialspoint @ Google+">Google+</a></li>
+              <li class="twitter"><a href="http://www.twitter.com/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Twitter">Twitter</a></li>
+              <li class="linkedin"><a href="http://www.linkedin.com/company/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Linkedin">Linkedin</a></li>
+              <li class="rss"><a href="http://feeds.feedburner.com/SharedTutorials" target="_blank" data-placement="bottom" title="tutorialspoint RSS">RSS</a></li>
+              </ul>
+           </li>
+         </ul>
+      </nav>
+         <!-- search code here  --> 
+      <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull" style="top: 3858px!important"> <i class="icon icon-bars"></i> </button>
+   </div>
+   <div class="navbar nav-main">
+      <div class="container">
+         <nav class="nav-main mega-menu">
+            <ul class="nav nav-pills nav-main" id="mainMenu">
+               <li class="dropdown no-sub-menu"> <a class="dropdown" href="http://www.tutorialspoint.com/index.htm"><i class="icon icon-home"></i> Home</a> </li>   
+               <li class="dropdown" id="liTL"><a class="dropdown tut-lib" href="javascript:void(0);"> Tutorials Library  <i class="fa-caret-down"></i> </a></li>
+               <li class="dropdown" id="liCG"><a class="dropdown" href="javascript:void(0);"><i class="fa-code"></i> Coding Ground <i class="fa-caret-down"></i> </a> </li>
+               <li class="dropdown no-sub-menu"><a class="dropdown tut-plus" href="http://www.tutorialspoint.com/absoluteclasses/upcomingclasses.htm">Absolute Classes</a>
+               </li>
+            </ul>
+         </nav>
+         <div class="submenu-item sub-main-menu" id="top-sub-menu"></div>
+      </div>
+   </div>	
+</header>
+<div style="clear:both;"></div>
+<div role="main" class="main">
+<div class="container">
+<div class="row">
+<div class="col-md-2">
+<aside class="sidebar">
+<div class="mini-logo">
+<img src="./6.-Ruby_TK - Checkbutton Widget_files/ruby-mini-logo.jpg" alt="Ruby Tutorial">
+</div>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Ruby Basics</li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/index.htm">Ruby - Home</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_overview.htm">Ruby - Overview</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_environment.htm">Ruby - Environment</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_syntax.htm">Ruby - Syntax</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_classes.htm">Ruby - Classes</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_variables.htm">Ruby - Variables</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_operators.htm">Ruby - Operators</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_comments.htm">Ruby - Comments</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_if_else.htm">Ruby - IF...ELSE</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_loops.htm">Ruby - Loops</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_methods.htm">Ruby - Methods</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_blocks.htm">Ruby - Blocks</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_modules.htm">Ruby - Modules</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_strings.htm">Ruby - Strings</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_arrays.htm">Ruby - Arrays</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_hashes.htm">Ruby - Hashes</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_date_time.htm">Ruby - Date &amp; Time</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_ranges.htm">Ruby - Ranges</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_iterators.htm">Ruby - Iterators</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_input_output.htm">Ruby - File I/O</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_exceptions.htm">Ruby - Exceptions</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Ruby Advanced</li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_object_oriented.htm">Ruby - Object Oriented</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_regular_expressions.htm">Ruby - Regular Expressions</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_database_access.htm">Ruby - Database Access</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_web_applications.htm">Ruby - Web Applications</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_sending_email.htm">Ruby - Sending Email</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_socket_programming.htm">Ruby - Socket Programming</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_xml_xslt.htm">Ruby - Ruby/XML, XSLT</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_web_services.htm">Ruby - Web Services</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_tk_guide.htm" style="background-color: rgb(214, 214, 214);">Ruby - Tk Guide</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_ldap.htm">Ruby - Ruby/LDAP Tutorial</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_multithreading.htm">Ruby - Multithreading</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Ruby Useful Resources</li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_quick_guide.htm">Ruby - Quick Guide</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_builtin_functions.htm">Ruby - Built-in Functions</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_predefined_variables.htm">Ruby - Predefined Variables</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_predefined_constants.htm">Ruby - Predefined Constants</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_associated_tools.htm">Ruby - Associated Tools</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_resources.htm">Ruby - Useful Resources</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby/ruby_discussion.htm">Ruby - Discussion</a></li>
+<li><a class="left" target="_top" href="http://www.tutorialspoint.com/ruby-on-rails/index.htm">Ruby - Ruby on Rails Tutorial</a></li>
+</ul>
+<ul class="nav nav-list primary push-bottom left-menu special">
+<li class="sreading">Selected Reading</li>
+<li><a target="_top" href="http://www.tutorialspoint.com/developers_best_practices/index.htm">Developer's Best Practices</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/questions_and_answers.htm">Questions and Answers</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/effective_resume_writing.htm">Effective Resume Writing</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/hr_interview_questions/index.htm">HR Interview Questions</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/computer_glossary.htm">Computer Glossary</a></li>
+<li><a target="_top" href="http://www.tutorialspoint.com/computer_whoiswho.htm">Who is Who</a></li>
+</ul>
+</aside>
+</div>
+<!-- PRINTING STARTS HERE -->
+<div class="row">
+<div class="content">
+<div class="col-md-7 middle-col">
+<h1>Ruby/TK - Checkbutton Widget </h1>
+<div class="topgooglead">
+<hr>
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script>
+</div>
+<hr>
+<div class="pre-btn">
+<a href="http://www.tutorialspoint.com/ruby/ruby_tk_guide.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="http://www.tutorialspoint.com/ruby/ruby_tk_guide.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
+</div>
+<div class="clearer"></div>
+<hr>
+ <h2>Description:</h2>
+<p>A <b>Checkbutton</b> is like a regular button, except that not only can the user press it, which will invoke a command callback, but it also holds a binary value of some kind (i.e., a toggle). Checkbuttons are used all the time when a user is asked to choose between, e.g., two different values for an option.</p>
+<p>A checkbutton can display a textual string, bitmap or image. If text is displayed, it must all be in a single font, but it can occupy multiple lines on the screen (if it contains newlines or if wrapping occurs because of the <i>wraplength</i> option) and one of the characters may optionally be underlined using the <i>underline</i> option.</p>
+<p>A checkbutton has all of the behavior of a simple button, including the following: it can display itself in either of three different ways, according to the state option; it can be made to appear raised, sunken, or flat; it can be made to flash; and it invokes a Tcl command whenever mouse button 1 is clicked over the checkbutton.</p>
+<h2>Syntax:</h2>
+<p>Here is a simple syntax to create this widget:</p>
+<pre class="prettyprint notranslate prettyprinted"><span class="typ">TkCheckButton</span><span class="pun">.</span><span class="kwd">new</span><span class="pun">(</span><span class="pln">root</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="pun">.....</span><span class="typ">Standard</span><span class="pln"> </span><span class="typ">Options</span><span class="pun">....</span><span class="pln">
+  </span><span class="pun">.....</span><span class="typ">Widget</span><span class="pun">-</span><span class="pln">specific </span><span class="typ">Options</span><span class="pun">....</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<h2>Standard Options:</h2>
+<ul class="list">
+<li><p>activebackground</p></li>
+<li><p>activeforeground </p></li>
+<li><p>anchor </p></li>
+<li><p>background </p></li>
+<li><p>bitmap </p></li>
+<li><p>borderwidth </p></li>
+<li><p>compound</p></li>
+<li><p>cursor</p></li>
+<li><p>disabledforeground </p></li>
+<li><p>font </p></li>
+<li><p>foreground </p></li>
+<li><p>highlightbackground </p></li>
+<li><p>highlightcolor </p></li>
+<li><p>highlightthickness </p></li>
+<li><p>image</p></li>
+<li><p>justify </p></li>
+<li><p>padx </p></li>
+<li><p>pady </p></li>
+<li><p>relief </p></li>
+<li><p>takefocus </p></li>
+<li><p>text </p></li>
+<li><p>textvariable </p></li>
+<li><p>underline </p></li>
+<li><p>wraplength </p></li>
+</ul>
+<p>These options have been described in previous chapter.</p>
+<h2>Widget-specific Options:</h2>
+<table class="table table-bordered">
+<tbody><tr><th style="width:5%">SN</th><th>Options with Description</th></tr>
+<tr><td>1</td><td><b>command </b>  =&gt; String <p>Specifies a Ruby command to associate with the button. This command is typically invoked when mouse button 1 is released over the button window. Here you can associate a Ruby method to be executed against mouse click. Built in function which can be called using command option:</p>
+<ul class="list">
+<li><p><b>deselect:</b> Deselects the checkbutton and sets the associated variable to its "off" value.</p></li>
+<li><p><b>flash:</b> Flashes the checkbutton. This is accomplished by redisplaying the checkbutton several times, alternating between active and normal colors.</p></li>
+<li><p><b>select:</b> Selects the checkbutton and sets the associated variable to its "on" value.</p></li>
+<li><p><b>toggle:</b>  Toggles the selection state of the button, redisplaying it and modifying its associated variable to reflect the new state.</p></li>
+</ul>
+</td></tr>
+<tr><td>2</td><td><b>height</b>  =&gt; Integer <p>Specifies a desired height for the button.</p></td></tr>
+<tr><td>3</td><td><b>indicatoron </b>  =&gt; Boolean <p>Specifies whether or not the indicator should be drawn. Must be a proper boolean value. If <i>false</i>, the <i>relief</i> option is ignored and the widget's relief is always sunken if the widget is selected and raised otherwise.</p></td></tr>
+<tr><td>4</td><td><b>offvalue</b>  =&gt; Integer <p>Specifies value to store in the button's associated variable whenever this button is deselected. Defaults to 0.</p></td></tr>
+<tr><td>5</td><td><b>onvalue </b>  =&gt; Integer <p>Specifies value to store in the button's associated variable whenever this button is selected. Defaults to 1</p></td></tr>
+<tr><td>6</td><td><b>selectcolor </b>  =&gt; String <p>Specifies a background color to use when the button is selected. If <i>indicatoron</i> is true, then the color applies to the indicator. If <i>indicatoron</i> is false, this color is used as the background for the entire widget, in place of <i>background</i> or <i>activebackground</i>, whenever the widget is selected.</p></td></tr>
+<tr><td>7</td><td><b>selectimage </b>  =&gt; Image <p>Specifies an image to display (in place of the image option) when the checkbutton is selected. This option is ignored unless the image option has been specified.</p></td></tr>
+<tr><td>8</td><td><b>state </b>  =&gt; String <p>Specifies one of three states for the button: <i>normal, active, or disabled</i>. In normal state the button is displayed using the <i>foreground</i> and <i>background</i> options. The active state is typically used when the pointer is over the button. In active state the button is displayed using the <i>activeforeground</i> and <i>activebackground</i> options. Disabled state means that the button should be insensitive.</p></td></tr>
+<tr><td>9</td><td><b>variable </b>  =&gt; Variable <p>Specifies name of global variable to set to indicate whether or not this button is selected. Defaults to the name of the button within its parent</p></td></tr>
+<tr><td>10</td><td><b>width</b>  =&gt; Integer <p>Specifies a desired width for the button.</p></td></tr>
+</tbody></table>
+<h2>Event Bindings:</h2>
+<p>Ruby/Tk automatically creates class bindings for checkbuttons that give them the following default behavior:</p>
+<ul class="list">
+<li><p>A checkbutton activates whenever the mouse passes over it and deactivates whenever the mouse leaves the checkbutton.</p></li>
+<li><p>When mouse button 1 is pressed over a checkbutton it is invoked (its selection state toggles and the command associated with the button is invoked, if there is one).</p></li>
+<li><p>When a checkbutton has the input focus, the space key causes the checkbutton to be invoked.</p></li>
+</ul>
+<p>If the checkbutton's state is <i>disabled</i> then none of the above actions occur: the checkbutton is completely non-responsive.</p>
+<h2>Examples:</h2>
+<pre class="prettyprint notranslate prettyprinted"><span class="kwd">require</span><span class="pln"> </span><span class="str">'tk'</span><span class="pln">
+
+root </span><span class="pun">=</span><span class="pln"> </span><span class="typ">TkRoot</span><span class="pun">.</span><span class="kwd">new</span><span class="pln">
+root</span><span class="pun">.</span><span class="pln">title </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Window"</span><span class="pln">
+
+</span><span class="typ">CkhButton1</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="typ">TkCheckButton</span><span class="pun">.</span><span class="kwd">new</span><span class="pun">(</span><span class="pln">root</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">do</span><span class="pln">
+  text </span><span class="str">"Orange"</span><span class="pln">
+  indicatoron </span><span class="str">"true"</span><span class="pln">
+  background  </span><span class="str">"red"</span><span class="pln">
+  relief </span><span class="str">"groove"</span><span class="pln">
+  height </span><span class="lit">2</span><span class="pln">
+  width </span><span class="lit">2</span><span class="pln">
+  onvalue </span><span class="str">'Orange'</span><span class="pln">
+  place</span><span class="pun">(</span><span class="str">'height'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="lit">25</span><span class="pun">,</span><span class="str">'width'</span><span class="pln">  </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="lit">100</span><span class="pun">,</span><span class="pln"> </span><span class="str">'x'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="lit">10</span><span class="pun">,</span><span class="pln"> </span><span class="str">'y'</span><span class="pun">=&gt;</span><span class="pln"> </span><span class="lit">10</span><span class="pun">)</span><span class="pln">
+  command </span><span class="pun">(</span><span class="kwd">select</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="typ">CkhButton2</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="typ">TkCheckButton</span><span class="pun">.</span><span class="kwd">new</span><span class="pun">(</span><span class="pln">root</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">do</span><span class="pln">
+  text </span><span class="str">"Banana"</span><span class="pln">
+  background  </span><span class="str">"red"</span><span class="pln">
+  relief </span><span class="str">"groove"</span><span class="pln">
+  height </span><span class="lit">2</span><span class="pln">
+  width </span><span class="lit">2</span><span class="pln">
+  onvalue </span><span class="str">'Banana'</span><span class="pln">
+  place</span><span class="pun">(</span><span class="str">'height'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="lit">25</span><span class="pun">,</span><span class="str">'width'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="lit">100</span><span class="pun">,</span><span class="pln"> </span><span class="str">'x'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="lit">10</span><span class="pun">,</span><span class="pln"> </span><span class="str">'y'</span><span class="pun">=&gt;</span><span class="pln"> </span><span class="lit">40</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="typ">Tk</span><span class="pun">.</span><span class="pln">mainloop</span></pre>
+<p>This will produce the following result:</p>
+<img src="./6.-Ruby_TK - Checkbutton Widget_files/tk-checkbox.jpg" alt="Ruby/Tk Checkbox">  
+<hr>
+<div class="pre-btn">
+<a href="http://www.tutorialspoint.com/ruby/ruby_tk_guide.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
+</div>
+<div class="print-btn center">
+<a href="http://www.tutorialspoint.com/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a>
+</div>
+<div class="nxt-btn">
+<a href="http://www.tutorialspoint.com/ruby/ruby_tk_guide.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
+</div>
+<div class="parent-file">ruby_tk_guide.htm</div>
+<hr>
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead">
+<div class="bottomadtag">Advertisements</div>
+<script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3" id="rightbar">
+<div class="simple-ad">
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;http://www.facebook.com/sharer.php?u=&#39; + &#39;http://www.tutorialspoint.com/ruby/ruby_tk_checkbutton.htm&#39;,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./6.-Ruby_TK - Checkbutton Widget_files/facebookIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;http://twitter.com/share?url=&#39; + &#39;http://www.tutorialspoint.com/ruby/ruby_tk_checkbutton.htm&#39;,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./6.-Ruby_TK - Checkbutton Widget_files/twitterIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;https://www.linkedin.com/cws/share?url=&#39; + &#39;http://www.tutorialspoint.com/ruby/ruby_tk_checkbutton.htm&amp;title=&#39;+ document.title,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./6.-Ruby_TK - Checkbutton Widget_files/linkedinIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;https://plus.google.com/share?url=http://www.tutorialspoint.com/ruby/ruby_tk_checkbutton.htm&#39;,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./6.-Ruby_TK - Checkbutton Widget_files/googlePlusIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/ruby/ruby_tk_checkbutton.htm&amp;title=&#39;+ document.title,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./6.-Ruby_TK - Checkbutton Widget_files/StumbleUponIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;http://reddit.com/submit?url=http://www.tutorialspoint.com/ruby/ruby_tk_checkbutton.htm&amp;title=&#39;+ document.title,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=656,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./6.-Ruby_TK - Checkbutton Widget_files/reddit.jpg" alt="img">
+</a>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="footer-copyright">
+<div class="container">
+<div class="row">
+<div class="col-md-1">
+<a href="http://www.tutorialspoint.com/index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="./6.-Ruby_TK - Checkbutton Widget_files/logo-footer.png"> </a>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+   <nav id="sub-menu">
+      <ul>
+         <li><a href="http://www.tutorialspoint.com/about/tutorials_writing.htm">Write for us</a></li>
+         <li><a href="http://www.tutorialspoint.com/about/faq.htm">FAQ's</a></li>
+         <li><a href="http://www.tutorialspoint.com/about/about_helping.htm">Helping</a></li>
+         <li><a href="http://www.tutorialspoint.com/about/contact_us.htm">Contact</a></li>
+      </ul>
+   </nav>
+</div>
+<div class="col-md-3 col-sm-12 col-xs-12">
+<p>© Copyright 2015. All Rights Reserved.</p>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+   <div class="news-group">
+      <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == &#39;Enter email for newsletter...&#39;) {this.value = &#39;&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;Enter email for newsletter...&#39;;}">
+      <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span>
+      <div id="newsresponse"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Libs -->
+<script type="text/javascript" src="./6.-Ruby_TK - Checkbutton Widget_files/custom-min.js"></script><a class="scroll-to-top visible" href="http://www.tutorialspoint.com/#" id="scrollToTop"><i class="icon icon-chevron-up icon-white"></i></a>
+<script src="./6.-Ruby_TK - Checkbutton Widget_files/urchin.js">
+</script>
+<script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>
+<script type="text/javascript" src="./6.-Ruby_TK - Checkbutton Widget_files/jquery.colorbox-min.js"></script>
+<script type="text/javascript">
+   var tryit = new $.TryIt('/ruby/try_ruby.php');
+   tryit.compile();
+</script><div id="source" style="display:none;"></div><div id="supportsource" style="display:none;"></div><div id="utilsource" style="display:none;"></div><div id="extrasource" style="display:none;"></div><div id="inputs" style="display:none;"></div><div id="filename" style="display:none;"></div>
+
+
+<div class="autocomplete-suggestions " style="top: 3912px; left: 867.5px; width: 407px;"></div><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div></body></html>
